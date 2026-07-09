@@ -1,5 +1,191 @@
 # Project 2 - Web Crawler
 
+
+## Introduction
+
+A **Web Crawler** is a software system that automatically discovers, downloads, and processes web pages by following hyperlinks. It begins with one or more **seed URLs**, fetches their content, extracts new links, validates and normalizes them, and continues this process recursively. The primary objective is to build a collection of web pages that can later be used for applications such as search engines, data mining, website analysis, and information retrieval.
+
+This crawler is designed using a **modular architecture**, where each component is responsible for a single task. This separation of responsibilities improves maintainability, scalability, testing, and allows new features to be added without affecting existing modules.
+
+The crawler supports both **static HTML pages** and **JavaScript-rendered pages**. Static pages are fetched using **libcurl**, while dynamically rendered pages are fetched using the **Chrome DevTools Protocol (CDP)**. A lightweight threshold-based scoring system is used to determine which fetching strategy should be applied.
+
+---
+
+# Main Components
+
+## 1. URL Validator
+
+### Purpose
+
+The URL Validator ensures that only valid URLs enter the crawling pipeline.
+
+### Responsibilities
+
+- Verify that the URL is not empty.
+- Validate supported protocols (`http://` and `https://`).
+- Ensure that a valid domain name exists.
+- Reject malformed or incomplete URLs.
+- Prevent invalid URLs from entering the URL Frontier.
+
+---
+
+## 2. URL Frontier
+
+### Purpose
+
+The URL Frontier manages all URLs waiting to be crawled.
+
+### Responsibilities
+
+- Store discovered URLs.
+- Schedule URLs using FIFO order.
+- Add newly discovered URLs.
+- Return the next URL for crawling.
+- Track crawl depth (if required).
+- Prevent duplicate scheduling.
+
+---
+
+## 3. URL Normalizer
+
+### Purpose
+
+The URL Normalizer converts different representations of the same webpage into one canonical form.
+
+### Responsibilities
+
+- Convert protocol and hostname to lowercase.
+- Remove default ports.
+- Remove URL fragments (`#fragment`).
+- Normalize trailing slashes.
+- Resolve relative URLs into absolute URLs.
+- Produce a standardized URL before duplicate checking.
+
+### Example
+
+**Input**
+
+```
+HTTP://Example.com/
+https://example.com:443
+https://example.com/#about
+```
+
+**Normalized Output**
+
+```
+https://example.com
+```
+
+---
+
+## 4. Seen URL Storage
+
+### Purpose
+
+Seen URL Storage prevents duplicate crawling.
+
+### Responsibilities
+
+- Store normalized URLs.
+- Check whether a URL has already been discovered.
+- Prevent duplicate crawling.
+- Provide fast lookup using a hash-based data structure.
+
+---
+
+## 5. Page Storage
+
+### Purpose
+
+Page Storage stores downloaded webpages for future processing.
+
+### Responsibilities
+
+- Store webpage URL.
+- Store HTML content.
+- Store metadata such as:
+  - HTTP status code
+  - Crawl timestamp
+  - Crawl depth
+- Retrieve stored pages efficiently.
+- Provide data for indexing and further processing.
+
+---
+
+## 6. Fetcher
+
+### Purpose
+
+The Fetcher downloads webpage content.
+
+The crawler supports two different fetching mechanisms.
+
+---
+
+### Static HTML Fetcher
+
+Used for websites whose content is directly available in the server response.
+
+#### Technology
+
+- libcurl
+
+#### Advantages
+
+- Fast execution
+- Low memory usage
+- High crawling throughput
+- Suitable for traditional websites
+
+---
+
+### Rendered HTML Fetcher
+
+Used for websites that generate content dynamically using JavaScript.
+
+#### Technology
+
+- Chrome DevTools Protocol (CDP)
+
+The browser loads the webpage, executes JavaScript, waits for rendering to complete, and extracts the final DOM.
+
+---
+
+# Static vs Rendered HTML Detection
+
+Before selecting the fetcher, the crawler analyzes the initial HTML response and assigns a **JavaScript Rendering Score**.
+
+Each detected indicator contributes points toward the final score.
+
+| Indicator | Points |
+|-----------|-------:|
+| Large number of `<script>` tags | +2 |
+| Root application container (`#root`, `#app`) | +3 |
+| Very small visible HTML body | +2 |
+| React, Vue, Angular, Next.js keywords | +3 |
+| Large number of empty placeholder elements | +2 |
+| `<noscript>` requesting JavaScript | +2 |
+| Fully populated HTML content | -3 |
+
+---
+
+## Threshold Decision
+
+After calculating the total score:
+
+| Score | Decision |
+|-------:|----------|
+| Less than **5** | Fetch using **libcurl** |
+| Greater than or equal to **5** | Fetch using **Chrome DevTools Protocol (CDP)** |
+
+This approach avoids launching a browser for every webpage, improving crawling speed while still supporting modern JavaScript-based websites.
+
+---
+# Overall Crawling Workflow
+
+![alt text](<../Memory_management_pics/WhatsApp Image 2026-07-09 at 6.42.41 AM.jpeg>)
+
 # Component 1 - URL Frontier
 
 ## Objective
@@ -14,26 +200,29 @@ By controlling the order and frequency of URL visits, the URL Frontier improves 
 
 # Section 1 - Public API
 
+The **Public API** defines the operations that other modules of the crawler can perform on the **URL Frontier**. It provides a simple interface for adding URLs, retrieving the next URL to crawl, inspecting the queue, and managing the frontier without exposing its internal implementation. This abstraction allows other components (such as the crawler controller and fetcher) to interact with the frontier without needing to know how the queue is implemented internally.
+
 | Function | Parameters | Return Type | Purpose |
 |----------|------------|-------------|---------|
-| `addURL(node)` | `node : URLNode` | `void` | Adds a new URL node (URL and crawl depth) to the frontier queue for future crawling. |
-| `getNextURL()` | None | `URLNode` | Retrieves and removes the next URL node from the frontier following FIFO order. |
-| `peekNextURL()` | None | `const URLNode&` | Returns the next URL node in the frontier without removing it from the queue. |
-| `isEmpty()` | None | `bool` | Checks whether the frontier queue contains any pending URL nodes. |
-| `getFrontierSize()` | None | `size_t` | Returns the total number of URL nodes currently stored in the frontier queue. |
-| `clearFrontier()` | None | `void` | Removes all URL nodes from the frontier and resets the queue. |
+| `addURL(const URLNode& node)` | `node : URLNode` | `void` | Adds a new URL node, containing the URL and its crawl depth, to the end of the frontier queue so it can be crawled later. |
+| `getNextURL()` | None | `URLNode` | Removes and returns the URL node at the front of the queue, ensuring URLs are processed in First-In, First-Out (FIFO) order. |
+| `peekNextURL()` | None | `const URLNode&` | Returns a reference to the URL node at the front of the queue without removing it, allowing the caller to inspect the next URL to be crawled. |
+| `isEmpty()` | None | `bool` | Returns `true` if the frontier contains no URL nodes; otherwise returns `false`. |
+| `size()` | None | `size_t` | Returns the current number of URL nodes stored in the frontier queue. |
+| `clear()` | None | `void` | Removes all URL nodes from the frontier queue, leaving it empty and ready for reuse. |
+
 ### Class Definition
 
 ```cpp
 class URLFrontier
 {
 public:
-    bool addURL(string url);
-    string getNextURL();
-    string peekNextURL();
-    bool isEmpty();
-    int getFrontierSize();
-    void clearFrontier();
+    void addURL(const URLNode& node);
+    URLNode getNextURL();
+    const URLNode& peekNextURL() const;
+    bool isEmpty() const;
+    size_t size() const;
+    void clear();
 };
 ```
 
@@ -41,188 +230,105 @@ public:
 
 # Section 2 - Internal Representation
 
-![alt text](../Memory_management_pics/frontier_implementation.jpeg)
-![alt text](../Memory_management_pics/frontier_structure.jpeg)
+![alt text](<../Memory_management_pics/WhatsApp Image 2026-07-09 at 7.04.12 AM (1).jpeg>)
+![alt text](<../Memory_management_pics/WhatsApp Image 2026-07-09 at 7.25.36 AM.jpeg>)
 
 A URL Frontier can be implemented as a **Doubly Linked List** or **Priority Queue**.
 
 Each node stores:
 
 - URL
-- Search state
 - Depth
+- Retry count
 - Pointer to previous node
 - Pointer to next node
 
 
 
-# Section 3 - Failure Handling
+# Section 3 - Failure Handling in URL Frontier
 
-The frontier stores URLs waiting to be crawled. Several exceptional situations must be handled to ensure reliable crawling.
+The URL Frontier is responsible for managing URLs waiting to be crawled. Although it does not perform network requests itself, it supports the crawler by handling URLs whose fetching process fails.
 
----
+## Failure Scenarios
 
-## 1. Invalid URLs
+A URL may fail to be crawled due to several reasons, including:
 
-Before adding a URL, validate it.
+- Network timeout
+- DNS resolution failure
+- Connection refused
+- HTTP server errors (5xx)
+- Temporary internet connectivity issues
+- Browser rendering failure (CDP)
 
-### Handling
+## Failure Handling Strategy
 
-- Check whether the URL format is correct.
-- Ignore unsupported protocols:
-  - `ftp://`
-  - `mailto:`
-  - `javascript:`
-- Reject malformed URLs.
+When the Fetcher reports a failure, the crawler follows these steps:
 
-### Example
+1. Remove the URL from the frontier for processing.
+2. Attempt to fetch the webpage.
+3. If the fetch succeeds:
+   - Store the webpage.
+   - Extract links.
+   - Continue crawling.
+4. If the fetch fails:
+   - Increase the URL's retry count.
+   - If the retry count is less than the maximum allowed retries, place the URL back into the frontier.
+   - If the retry limit is reached, permanently discard the URL and record the failure in a log.
 
-```text
-https://example.com/page1      ✓ Added
+## Retry Policy
 
-htp://example.com              ✗ Invalid protocol
+Each URL node stores a retry counter.
 
-javascript:void(0)             ✗ Ignored
+Example:
+
+```
+URL: https://example.com
+Depth: 2
+Retry Count: 1
 ```
 
----
+If `Retry Count < MAX_RETRIES`
 
-## 2. Duplicate URLs
-
-The frontier maintains a **Visited Set** and a **Discovered Set**.
-
-Before inserting a URL:
-
-- Check whether it already exists in the frontier.
-- Check whether it has already been visited.
-
-If found, ignore the URL.
-
-### Example
-
-```text
-Visited:
-
-https://example.com
-
-New URL:
-
-https://example.com
-
-Result:
-
-Duplicate → Not added
+```
+Reinsert into URL Frontier
 ```
 
----
+Otherwise
 
-## 3. Download Failures
-
-Sometimes a page cannot be downloaded.
-
-### Handling
-
-- Retry download several times.
-- Mark URL as **FAILED** if retries exceed the limit.
-- Continue crawling other URLs.
-
-### Example
-
-```text
-Download:
-
-https://example.com
-
-Attempt 1 → Timeout
-
-Attempt 2 → Timeout
-
-Attempt 3 → Failed
-
-Result:
-
-Move URL to Failed List
-Continue crawling
 ```
-
----
-
-## 4. Malformed HTML
-
-Some webpages contain invalid HTML.
-
-### Handling
-
-- Use an HTML parser capable of recovering from malformed HTML.
-- Extract valid links.
-- Ignore corrupted sections.
-
-### Example
-
-```html
-<html>
-<body>
-
-<a href="page2.html">Page 2
-
-<div>
-
-<p>Missing closing tags
+Move to Failed URL Log
 ```
-
-Result:
-
-```text
-Parser repairs HTML
-
-Extracts:
-
-page2.html
-
-Continues crawling
-```
-
----
-
-## 5. Empty Pages
-
-Some downloaded pages contain no useful content.
-
-### Handling
-
-- Mark page as visited.
-- Store page if required.
-- Add no new URLs.
-
-### Example
-
-```text
-Downloaded Page
-
-Content:
-
-(empty)
-
-Result:
-
-Visited ✓
-
-No URLs added
-```
-
----
 
 # Section 4 - Complexity Analysis
 
+The **URL Frontier** is implemented using a queue based on a **Doubly Linked List**. Since the queue maintains pointers to both the front and rear nodes, most operations execute in constant time regardless of the number of URLs stored. The only exception is `clear()`, which must remove every node individually.
+
 | Operation | Best | Average | Worst | Reason |
 |-----------|------|----------|-------|--------|
-| `addURL()` | O(1) | O(1) | O(1) | Inserts a URL node at the rear of the queue. |
-| `getNextURL()` | O(1) | O(1) | O(1) | Removes the front URL node directly from the queue. |
-| `peekNextURL()` | O(1) | O(1) | O(1) | Returns the front URL node without removing it. |
-| `isEmpty()` | O(1) | O(1) | O(1) | Checks whether the queue contains any elements. |
-| `getFrontierSize()` | O(1) | O(1) | O(1) | Returns the maintained count of URL nodes in the queue. |
-| `clearFrontier()` | O(n) | O(n) | O(n) | Removes all URL nodes from the queue one by one, where **n** is the number of stored URLs. |
+| `addURL()` | **O(1)** | **O(1)** | **O(1)** | The new `URLNode` is always inserted at the rear of the queue. Since the queue maintains a direct pointer to the last node, no traversal is required. Whether the frontier contains one URL or thousands of URLs, the insertion process always performs the same fixed number of operations, so the running time remains constant. |
+| `getNextURL()` | **O(1)** | **O(1)** | **O(1)** | The next URL is always removed from the front of the queue. Because the queue maintains a pointer to the front node, the operation simply updates the front pointer and removes the first node. No searching or traversal of the remaining URLs is needed, so the execution time is constant in all cases. |
+| `peekNextURL()` | **O(1)** | **O(1)** | **O(1)** | This function only returns a reference to the URL node at the front of the queue without removing it. The front node is accessed directly through the front pointer, making the operation independent of the number of URLs stored in the frontier. |
+| `isEmpty()` | **O(1)** | **O(1)** | **O(1)** | The function simply checks whether the queue contains any nodes, usually by testing whether the front pointer is `nullptr` or whether the stored size is zero. Since it performs only a single comparison, the execution time is always constant. |
+| `size()` | **O(1)** | **O(1)** | **O(1)** | The queue maintains the current number of stored URL nodes in a dedicated member variable that is updated whenever a URL is added or removed. Therefore, determining the size only requires returning this stored value instead of counting every node in the queue. |
+| `clear()` | **O(n)** | **O(n)** | **O(n)** | To completely empty the frontier, every URL node must be removed and its memory released. Since each of the **n** nodes is processed exactly once, the running time grows linearly with the number of stored URLs. Regardless of the queue's contents, all nodes must be visited before the frontier becomes empty. |
+
 ---
+
+## Summary
+
+- **Constant Time (O(1))**
+  - `addURL()`
+  - `getNextURL()`
+  - `peekNextURL()`
+  - `isEmpty()`
+  - `size()`
+
+  These operations access either the **front pointer**, **rear pointer**, or the maintained **size variable** directly. They never traverse the queue, so their execution time does not depend on the number of URLs stored.
+
+- **Linear Time (O(n))**
+  - `clear()`
+
+  This operation must remove every URL node individually. As the number of stored URLs increases, the time required increases proportionally, resulting in **O(n)** complexity.
 
 # Section 5 - Future Compatibility with Project 03 (Indexer)
 
@@ -1147,4 +1253,157 @@ URL Frontier
       ▼
  Search Index
 ```
+# Component 6 - URL validator
+
+## Objective
+
+The **URL Validator** is responsible for verifying that a URL is syntactically valid before it enters the crawler pipeline. Its primary purpose is to prevent malformed, incomplete, or unsupported URLs from being processed by downstream components such as the **URL Normalizer**, **Seen URL Storage**, **URL Frontier**, and **Fetcher**.
+
+By filtering invalid URLs at the earliest stage, the validator improves the reliability of the crawler, reduces unnecessary network requests, and prevents resources from being wasted on URLs that cannot be successfully fetched.
+
+In the current implementation, the URL Validator performs the following checks:
+
+- Ensures that the URL is not empty.
+- Verifies that the URL begins with a supported protocol (`http://` or `https://`).
+- Confirms that a domain name exists after the protocol.
+- Rejects URLs containing whitespace within the domain.
+- Ensures that the domain contains at least one period (`.`), indicating a valid domain structure.
+- Rejects domains that end with a trailing period (`.`).
+
+Only URLs that satisfy all of these validation rules are accepted and passed to the next stage of the crawling pipeline. Any URL that fails one or more validation checks is immediately rejected, preventing invalid input from propagating through the system.
+
+# Section 1 - Public API
+
+The **Public API** of the **URL Validator** provides a simple interface for validating URLs before they enter the crawler pipeline. Instead of exposing the internal validation logic, the API allows other components (such as the URL Frontier or Crawler Controller) to determine whether a URL is valid by calling a single public function. The helper functions are kept private because they are only used internally to perform individual validation checks.
+
+| Function | Parameters | Return Type | Purpose |
+|----------|------------|-------------|---------|
+| `isValid(const std::string& url)` | `url : const std::string&` | `bool` | Acts as the main entry point of the URL Validator. It performs all validation checks in sequence, including verifying that the URL is not empty, checking for a supported protocol, and ensuring that a valid domain is present. If every validation rule succeeds, the function returns `true`; otherwise, it immediately returns `false`, preventing invalid URLs from entering the crawler pipeline. |
+
+---
+
+# Internal Helper Functions
+
+Although these functions are **private** and cannot be called directly by other components, they are responsible for performing specific validation tasks used by `isValid()`.
+
+| Function | Parameters | Return Type | Purpose |
+|----------|------------|-------------|---------|
+| `hasValidProtocol(const std::string& url)` | `url : const std::string&` | `bool` | Checks whether the URL begins with one of the supported protocols (`http://` or `https://`). This ensures that the crawler only accepts URLs that can be fetched using supported network protocols. If the protocol is missing or unsupported, the URL is rejected immediately. |
+| `hasDomain(const std::string& url)` | `url : const std::string&` | `bool` | Verifies that the URL contains a valid domain name after the protocol. It ensures that the domain is not empty, contains no whitespace, includes at least one period (`.`), and does not end with a trailing period. These checks help reject malformed or incomplete URLs before they are processed further by the crawler. |
+
+# Section 2 - Internal implementation
+
+![alt text](../Memory_management_pics/URLvalidator_implementation.jpeg)
+
+ Instead of performing all validation checks at once, the validator follows a step-by-step process where each validation rule is executed in sequence. If any validation step fails, the URL is immediately marked as invalid and no further checks are performed. This approach avoids unnecessary processing and improves the efficiency of the validation process.
+
+The validation process begins by checking whether the input URL string is empty. If the string is empty, the URL is immediately rejected. Otherwise, the validator verifies that the URL starts with a supported protocol (`http://` or `https://`). Once the protocol is confirmed, the validator extracts the domain portion of the URL and performs several domain-level checks.
+
+The extracted domain is then examined to ensure that it does not contain whitespace characters, includes at least one period (`.`), and does not end with a trailing period. These checks help identify malformed or incomplete URLs before they are passed to the remaining crawler components.
+
+Only when every validation step succeeds does the validator classify the URL as a **Valid URL**. Otherwise, the URL is rejected as **Invalid**, preventing malformed URLs from entering the crawler pipeline.
+
+# Section 3 - Failure handling 
+
+The URL Validator is responsible for identifying invalid URLs before they enter the crawler pipeline. Rather than attempting to correct malformed URLs, it follows a **fail-fast** approach, where validation stops as soon as an error is detected.
+
+## Failure Scenarios
+
+The validator rejects a URL if any of the following conditions are encountered:
+
+- The input URL is empty.
+- The URL does not begin with a supported protocol (`http://` or `https://`).
+- No domain name exists after the protocol.
+- The domain contains one or more whitespace characters.
+- The domain does not contain a period (`.`).
+- The domain ends with a trailing period (`.`).
+
+## Failure Handling Strategy
+
+The validator performs validation checks sequentially. If any check fails:
+
+1. The corresponding validation function returns `false`.
+2. The `isValid()` function immediately returns `false`.
+3. The URL is rejected and is **not** forwarded to the URL Normalizer or URL Frontier.
+4. The crawler can optionally log the invalid URL for debugging or analysis.
+
+# Section 4 - Complexity Analysis
+
+The URL Validator performs a fixed sequence of validation checks on the input URL. Most of these checks, such as verifying whether the string is empty or checking the protocol, require only a constant amount of work. However, validating the domain requires scanning the characters of the domain to search for spaces and a period (`.`). Therefore, the running time depends on the length of the input URL.
+
+Let **n** represent the length of the input URL string.
+
+| Operation | Best | Average | Worst | Reason |
+|-----------|------|----------|-------|--------|
+| `isValid()` | **O(n)** | **O(n)** | **O(n)** | The function performs multiple validation checks, including verifying the protocol and examining the domain. Although some checks execute in constant time, operations such as searching the domain for whitespace and a period require scanning the characters of the string. In the worst, average, and even the successful validation case, the algorithm may need to inspect most or all of the URL before reaching a decision. Since the amount of work grows proportionally with the length of the input URL, the overall time complexity is **O(n)**. |
+
+---
+
+## Summary
+
+- **Time Complexity:** **O(n)**
+- **Space Complexity:** **O(n)**
+
+### Explanation
+
+The validator performs several checks one after another without using nested loops or recursive calls. Each character of the input URL is examined at most a small constant number of times. As the length of the URL increases, the time required to validate it increases proportionally, resulting in **linear time complexity (O(n))**.
+
+The current implementation also creates a new string when extracting the domain using `substr()`. Since this operation copies the domain into a separate string, additional memory proportional to the domain length is required. Therefore, the auxiliary space complexity is also **O(n)**.
+
+# Section 5 - Future Compatibility with the Indexer
+
+Although the URL Validator does not communicate directly with the Indexer, it plays an important role in ensuring that only valid webpages reach the indexing stage. By rejecting malformed or unsupported URLs before they are fetched, the validator improves the overall quality of the data available for indexing.
+
+In future versions of the crawler, the URL Validator can be extended to perform additional validation checks that further improve indexing quality, such as:
+
+- Rejecting unsupported URL schemes (e.g., `ftp://`, `file://`, `mailto:`).
+- Blocking duplicate URLs after normalization.
+- Filtering URLs based on allowed or blocked domains.
+- Ignoring URLs that point to non-HTML resources such as images, videos, PDFs, or executable files.
+- Enforcing URL length limits to prevent processing excessively long or malformed URLs.
+- Supporting whitelist and blacklist rules for domain filtering.
+- Integrating with the URL Normalizer to ensure that only canonical URLs are indexed.
+
+These enhancements will help ensure that the Indexer receives a clean, consistent, and high-quality collection of webpages, reducing unnecessary processing and improving the efficiency and accuracy of the indexing process.
+
+# component 7 - URL normalizer
+
+## Objective
+
+The **URL Normalizer** is responsible for converting valid URLs into a **standardized (canonical) format** before they are stored or processed by the crawler. Different URLs can often refer to the same webpage even though they appear different in their textual representation. The primary objective of the URL Normalizer is to eliminate these differences so that every webpage is represented by a single, consistent URL.
+
+By normalizing URLs before they are inserted into the **Seen URL Storage** and **URL Frontier**, the crawler can accurately identify duplicate pages, avoid unnecessary crawling, and make better use of system resources. This reduces duplicate downloads, improves crawling efficiency, and ensures that the same webpage is not processed multiple times under different URL representations.
+
+In the current design, the URL Normalizer performs the following operations:
+
+- Converts the protocol (`HTTP`, `HTTPS`) to lowercase.
+- Converts the domain name to lowercase.
+- Removes default ports such as `:80` for HTTP and `:443` for HTTPS.
+- Removes URL fragments (the portion after `#`) because they do not affect the actual webpage content.
+- Removes unnecessary trailing slashes where appropriate.
+- Produces a single canonical representation of every valid URL before it is passed to the next stage of the crawler.
+
+After normalization, the standardized URL is forwarded to the **Seen URL Storage** for duplicate detection and then to the **URL Frontier** for scheduling. This ensures that the crawler processes each unique webpage only once, improving both performance and data consistency throughout the crawling pipeline.
+
+# Section 1 - Public API
+
+The **Public API** of the **URL Normalizer** provides a simple interface for converting a valid URL into its canonical (standardized) form before it is processed by the remaining crawler components. Other modules, such as the **Crawler Controller**, **Seen URL Storage**, and **URL Frontier**, only need to call a single public function to obtain the normalized URL. The individual normalization operations are implemented as private helper functions, ensuring that the internal implementation remains hidden and can be modified without affecting other components.
+
+| Function | Parameters | Return Type | Purpose |
+|----------|------------|-------------|---------|
+| `normalize(const std::string& url)` | `url : const std::string&` | `std::string` | Acts as the main entry point of the URL Normalizer. It receives a validated URL and applies all normalization rules one after another, including converting the protocol and domain to lowercase, removing default ports, removing URL fragments, and eliminating unnecessary trailing slashes. Once all transformations have been completed, the function returns a single standardized version of the URL that can safely be used for duplicate detection and future crawling. |
+
+---
+
+# Internal Helper Functions
+
+The following helper functions are **private** and are used internally by `normalize()` to perform individual normalization operations.
+
+| Function | Parameters | Return Type | Purpose |
+|----------|------------|-------------|---------|
+| `normalizeProtocol(const std::string& url)` | `url : const std::string&` | `std::string` | Converts the protocol portion of the URL into lowercase. For example, `HTTP://` becomes `http://` and `HTTPS://` becomes `https://`. This ensures that protocol capitalization does not cause duplicate URLs to be treated as different webpages. |
+| `normalizeDomain(const std::string& url)` | `url : const std::string&` | `std::string` | Converts the domain name to lowercase because domain names are case-insensitive. This guarantees that URLs such as `Example.com` and `example.com` are treated as the same webpage. |
+| `removeDefaultPort(const std::string& url)` | `url : const std::string&` | `std::string` | Removes default port numbers such as `:80` for HTTP and `:443` for HTTPS. Since these ports are automatically assumed by web browsers, removing them prevents multiple representations of the same URL from being stored separately. |
+| `removeFragment(const std::string& url)` | `url : const std::string&` | `std::string` | Removes the fragment identifier (the portion beginning with `#`). Fragments are used only for navigation within a webpage and do not change the actual content returned by the web server, so they are excluded from the normalized URL. |
+| `normalizeTrailingSlash(const std::string& url)` | `url : const std::string&` | `std::string` | Removes unnecessary trailing slashes from the URL where appropriate. This prevents URLs such as `https://example.com/page` and `https://example.com/page/` from being considered different when they refer to the same resource. |
 
