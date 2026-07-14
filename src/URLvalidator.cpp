@@ -11,7 +11,6 @@ bool URLValidator::isValid(const std::string &url) {
     return false;
   }
 
-  
   if (!hasDomain(url)) {
     return false;
   }
@@ -45,6 +44,14 @@ bool URLValidator::hasDomain(const std::string &url) {
   }
 
   if (domain.find('.') == std::string::npos) {
+    return false;
+  }
+
+  if (domain.front() == '.') {
+    return false;
+  }
+
+  if (domain.find("..") != std::string::npos) {
     return false;
   }
 
