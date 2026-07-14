@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Crawler.dir/src/URLnormalizer.cpp.obj.d"
   "CMakeFiles/Crawler.dir/src/URLvalidator.cpp.obj"
   "CMakeFiles/Crawler.dir/src/URLvalidator.cpp.obj.d"
+  "CMakeFiles/Crawler.dir/src/crawler.cpp.obj"
+  "CMakeFiles/Crawler.dir/src/crawler.cpp.obj.d"
   "CMakeFiles/Crawler.dir/src/fetcher.cpp.obj"
   "CMakeFiles/Crawler.dir/src/fetcher.cpp.obj.d"
   "CMakeFiles/Crawler.dir/src/frameworkdetector.cpp.obj"

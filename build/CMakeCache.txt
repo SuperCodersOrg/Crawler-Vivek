@@ -17,6 +17,12 @@
 //Builds the googlemock subproject
 BUILD_GMOCK:BOOL=ON
 
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=C:/msys64/ucrt64/lib/cmake/Boost-1.91.0
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=C:/msys64/ucrt64/include
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/msys64/ucrt64/bin/addr2line.exe
 
@@ -363,6 +369,36 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=C:/msys64/ucrt64/bin/pkg-config.exe
 
+//The directory containing a CMake configuration file for boost_assert.
+boost_assert_DIR:PATH=C:/msys64/ucrt64/lib/cmake/boost_assert-1.91.0
+
+//The directory containing a CMake configuration file for boost_compat.
+boost_compat_DIR:PATH=C:/msys64/ucrt64/lib/cmake/boost_compat-1.91.0
+
+//The directory containing a CMake configuration file for boost_config.
+boost_config_DIR:PATH=C:/msys64/ucrt64/lib/cmake/boost_config-1.91.0
+
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=C:/msys64/ucrt64/lib/cmake/boost_headers-1.91.0
+
+//The directory containing a CMake configuration file for boost_mp11.
+boost_mp11_DIR:PATH=C:/msys64/ucrt64/lib/cmake/boost_mp11-1.91.0
+
+//The directory containing a CMake configuration file for boost_predef.
+boost_predef_DIR:PATH=C:/msys64/ucrt64/lib/cmake/boost_predef-1.91.0
+
+//The directory containing a CMake configuration file for boost_system.
+boost_system_DIR:PATH=C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0
+
+//The directory containing a CMake configuration file for boost_throw_exception.
+boost_throw_exception_DIR:PATH=C:/msys64/ucrt64/lib/cmake/boost_throw_exception-1.91.0
+
+//The directory containing a CMake configuration file for boost_variant2.
+boost_variant2_DIR:PATH=C:/msys64/ucrt64/lib/cmake/boost_variant2-1.91.0
+
+//The directory containing a CMake configuration file for boost_winapi.
+boost_winapi_DIR:PATH=C:/msys64/ucrt64/lib/cmake/boost_winapi-1.91.0
+
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=D:/projects/Crawler/build/_deps/googletest-build/googlemock
 
@@ -417,6 +453,8 @@ pkgcfg_lib_LIBCURL_curl:FILEPATH=C:/msys64/ucrt64/lib/libcurl.dll.a
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -502,6 +540,8 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=D:/projects/Crawler
@@ -614,10 +654,14 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Deprecated.  Use -W[no-]deprecated instead.
 CMAKE_WARN_DEPRECATED:INTERNAL=ON
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake][found components: system ][v1.91.0()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[C:/msys64/ucrt64/bin/pkg-config.exe][v2.5.1()]
 //Details about finding Python3
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[C:/Users/vivek/anaconda930/python.exe][found components: Interpreter ][v3.12.7()]
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 LIBCURL_CFLAGS:INTERNAL=-IC:/msys64/ucrt64/bin/../include
 LIBCURL_CFLAGS_I:INTERNAL=
 LIBCURL_CFLAGS_OTHER:INTERNAL=

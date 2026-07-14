@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/projects/Crawler/src/URLfrontier.cpp" "CMakeFiles/Crawler.dir/src/URLfrontier.cpp.obj" "gcc" "CMakeFiles/Crawler.dir/src/URLfrontier.cpp.obj.d"
   "D:/projects/Crawler/src/URLnormalizer.cpp" "CMakeFiles/Crawler.dir/src/URLnormalizer.cpp.obj" "gcc" "CMakeFiles/Crawler.dir/src/URLnormalizer.cpp.obj.d"
   "D:/projects/Crawler/src/URLvalidator.cpp" "CMakeFiles/Crawler.dir/src/URLvalidator.cpp.obj" "gcc" "CMakeFiles/Crawler.dir/src/URLvalidator.cpp.obj.d"
+  "D:/projects/Crawler/src/crawler.cpp" "CMakeFiles/Crawler.dir/src/crawler.cpp.obj" "gcc" "CMakeFiles/Crawler.dir/src/crawler.cpp.obj.d"
   "D:/projects/Crawler/src/fetcher.cpp" "CMakeFiles/Crawler.dir/src/fetcher.cpp.obj" "gcc" "CMakeFiles/Crawler.dir/src/fetcher.cpp.obj.d"
   "D:/projects/Crawler/src/frameworkdetector.cpp" "CMakeFiles/Crawler.dir/src/frameworkdetector.cpp.obj" "gcc" "CMakeFiles/Crawler.dir/src/frameworkdetector.cpp.obj.d"
   "D:/projects/Crawler/src/pagestorage.cpp" "CMakeFiles/Crawler.dir/src/pagestorage.cpp.obj" "gcc" "CMakeFiles/Crawler.dir/src/pagestorage.cpp.obj.d"

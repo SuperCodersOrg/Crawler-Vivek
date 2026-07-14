@@ -4501,3 +4501,3418 @@ events:
         - "C:/msys64/ucrt64/bin"
         - "/bin"
 ...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:67 (find_package)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:97 (boostcfg_find_component)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindBoost.cmake:610 (find_package)"
+      - "CMakeLists.txt:20 (find_package)"
+    name: "boost_headers"
+    configs:
+      -
+        filename: "boost_headers.cps"
+        kind: "cps"
+      -
+        filename: "boost_headersConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "boost_headers-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.91.0"
+      version_complete: "1.91.0"
+      exact: true
+    settings:
+      required: "required_explicit"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "C:/msys64/ucrt64/lib/cmake"
+      names:
+        - "boost_headers"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_headersConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_headers-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/lib/cps/boost_headers.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/share/cps/boost_headers.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_headersConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_headers-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_headers-1.91.0/boost_headersConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/msys64/ucrt64/lib/cmake/boost_headers-1.91.0/boost_headers-config.cmake"
+      mode: "config"
+      version: "1.91.0"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310\\Scripts"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310"
+        - "C:\\Users\\vivek\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Crawler"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files/Git/mingw64"
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/msys64/ucrt64"
+        - "C:/Program Files (x86)/Crawler"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "C:/msys64/ucrt64/lib/cmake/boost_assert-1.91.0/boost_assert-config.cmake:10 (find_dependency)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/boost_system-config.cmake:10 (find_dependency)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:67 (find_package)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:128 (boostcfg_find_component)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindBoost.cmake:610 (find_package)"
+      - "CMakeLists.txt:20 (find_package)"
+    name: "boost_config"
+    configs:
+      -
+        filename: "boost_config.cps"
+        kind: "cps"
+      -
+        filename: "boost_configConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "boost_config-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.91.0"
+      version_complete: "1.91.0"
+      exact: true
+    settings:
+      required: "required_explicit"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "C:/msys64/ucrt64/lib/cmake/boost_assert-1.91.0/.."
+      names:
+        - "boost_config"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_configConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_config-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/lib/cps/boost_config.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/share/cps/boost_config.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_configConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_config-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_config-1.91.0/boost_configConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/msys64/ucrt64/lib/cmake/boost_config-1.91.0/boost_config-config.cmake"
+      mode: "config"
+      version: "1.91.0"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310\\Scripts"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310"
+        - "C:\\Users\\vivek\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Crawler"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files/Git/mingw64"
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/msys64/ucrt64"
+        - "C:/Program Files (x86)/Crawler"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/boost_system-config.cmake:10 (find_dependency)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:67 (find_package)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:128 (boostcfg_find_component)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindBoost.cmake:610 (find_package)"
+      - "CMakeLists.txt:20 (find_package)"
+    name: "boost_assert"
+    configs:
+      -
+        filename: "boost_assert.cps"
+        kind: "cps"
+      -
+        filename: "boost_assertConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "boost_assert-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.91.0"
+      version_complete: "1.91.0"
+      exact: true
+    settings:
+      required: "required_explicit"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/.."
+      names:
+        - "boost_assert"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_assertConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_assert-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/lib/cps/boost_assert.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/share/cps/boost_assert.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_assertConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_assert-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_assert-1.91.0/boost_assertConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/msys64/ucrt64/lib/cmake/boost_assert-1.91.0/boost_assert-config.cmake"
+      mode: "config"
+      version: "1.91.0"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310\\Scripts"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310"
+        - "C:\\Users\\vivek\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Crawler"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files/Git/mingw64"
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/msys64/ucrt64"
+        - "C:/Program Files (x86)/Crawler"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "C:/msys64/ucrt64/lib/cmake/boost_compat-1.91.0/boost_compat-config.cmake:16 (find_dependency)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/boost_system-config.cmake:13 (find_dependency)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:67 (find_package)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:128 (boostcfg_find_component)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindBoost.cmake:610 (find_package)"
+      - "CMakeLists.txt:20 (find_package)"
+    name: "boost_throw_exception"
+    configs:
+      -
+        filename: "boost_throw_exception.cps"
+        kind: "cps"
+      -
+        filename: "boost_throw_exceptionConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "boost_throw_exception-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.91.0"
+      version_complete: "1.91.0"
+      exact: true
+    settings:
+      required: "required_explicit"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "C:/msys64/ucrt64/lib/cmake/boost_compat-1.91.0/.."
+      names:
+        - "boost_throw_exception"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_throw_exceptionConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_throw_exception-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/lib/cps/boost_throw_exception.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/share/cps/boost_throw_exception.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_throw_exceptionConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_throw_exception-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_throw_exception-1.91.0/boost_throw_exceptionConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/msys64/ucrt64/lib/cmake/boost_throw_exception-1.91.0/boost_throw_exception-config.cmake"
+      mode: "config"
+      version: "1.91.0"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310\\Scripts"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310"
+        - "C:\\Users\\vivek\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Crawler"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files/Git/mingw64"
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/msys64/ucrt64"
+        - "C:/Program Files (x86)/Crawler"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/boost_system-config.cmake:13 (find_dependency)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:67 (find_package)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:128 (boostcfg_find_component)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindBoost.cmake:610 (find_package)"
+      - "CMakeLists.txt:20 (find_package)"
+    name: "boost_compat"
+    configs:
+      -
+        filename: "boost_compat.cps"
+        kind: "cps"
+      -
+        filename: "boost_compatConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "boost_compat-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.91.0"
+      version_complete: "1.91.0"
+      exact: true
+    settings:
+      required: "required_explicit"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/.."
+      names:
+        - "boost_compat"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_compatConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_compat-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/lib/cps/boost_compat.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/share/cps/boost_compat.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_compatConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_compat-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_compat-1.91.0/boost_compatConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/msys64/ucrt64/lib/cmake/boost_compat-1.91.0/boost_compat-config.cmake"
+      mode: "config"
+      version: "1.91.0"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310\\Scripts"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310"
+        - "C:\\Users\\vivek\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Crawler"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files/Git/mingw64"
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/msys64/ucrt64"
+        - "C:/Program Files (x86)/Crawler"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "C:/msys64/ucrt64/lib/cmake/boost_variant2-1.91.0/boost_variant2-config.cmake:16 (find_dependency)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/boost_system-config.cmake:22 (find_dependency)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:67 (find_package)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:128 (boostcfg_find_component)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindBoost.cmake:610 (find_package)"
+      - "CMakeLists.txt:20 (find_package)"
+    name: "boost_mp11"
+    configs:
+      -
+        filename: "boost_mp11.cps"
+        kind: "cps"
+      -
+        filename: "boost_mp11Config.cmake"
+        kind: "cmake"
+      -
+        filename: "boost_mp11-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.91.0"
+      version_complete: "1.91.0"
+      exact: true
+    settings:
+      required: "required_explicit"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "C:/msys64/ucrt64/lib/cmake/boost_variant2-1.91.0/.."
+      names:
+        - "boost_mp11"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_mp11Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_mp11-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/lib/cps/boost_mp11.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/share/cps/boost_mp11.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_mp11Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_mp11-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_mp11-1.91.0/boost_mp11Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/msys64/ucrt64/lib/cmake/boost_mp11-1.91.0/boost_mp11-config.cmake"
+      mode: "config"
+      version: "1.91.0"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310\\Scripts"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310"
+        - "C:\\Users\\vivek\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Crawler"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files/Git/mingw64"
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/msys64/ucrt64"
+        - "C:/Program Files (x86)/Crawler"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/boost_system-config.cmake:22 (find_dependency)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:67 (find_package)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:128 (boostcfg_find_component)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindBoost.cmake:610 (find_package)"
+      - "CMakeLists.txt:20 (find_package)"
+    name: "boost_variant2"
+    configs:
+      -
+        filename: "boost_variant2.cps"
+        kind: "cps"
+      -
+        filename: "boost_variant2Config.cmake"
+        kind: "cmake"
+      -
+        filename: "boost_variant2-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.91.0"
+      version_complete: "1.91.0"
+      exact: true
+    settings:
+      required: "required_explicit"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/.."
+      names:
+        - "boost_variant2"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_variant2Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_variant2-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/lib/cps/boost_variant2.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/share/cps/boost_variant2.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_variant2Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_variant2-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_variant2-1.91.0/boost_variant2Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/msys64/ucrt64/lib/cmake/boost_variant2-1.91.0/boost_variant2-config.cmake"
+      mode: "config"
+      version: "1.91.0"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310\\Scripts"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310"
+        - "C:\\Users\\vivek\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Crawler"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files/Git/mingw64"
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/msys64/ucrt64"
+        - "C:/Program Files (x86)/Crawler"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "C:/msys64/ucrt64/lib/cmake/boost_winapi-1.91.0/boost_winapi-config.cmake:13 (find_dependency)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/boost_system-config.cmake:25 (find_dependency)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:67 (find_package)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:128 (boostcfg_find_component)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindBoost.cmake:610 (find_package)"
+      - "CMakeLists.txt:20 (find_package)"
+    name: "boost_predef"
+    configs:
+      -
+        filename: "boost_predef.cps"
+        kind: "cps"
+      -
+        filename: "boost_predefConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "boost_predef-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.91.0"
+      version_complete: "1.91.0"
+      exact: true
+    settings:
+      required: "required_explicit"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "C:/msys64/ucrt64/lib/cmake/boost_winapi-1.91.0/.."
+      names:
+        - "boost_predef"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_predefConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_predef-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/lib/cps/boost_predef.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/share/cps/boost_predef.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_predefConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_predef-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_predef-1.91.0/boost_predefConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/msys64/ucrt64/lib/cmake/boost_predef-1.91.0/boost_predef-config.cmake"
+      mode: "config"
+      version: "1.91.0"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310\\Scripts"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310"
+        - "C:\\Users\\vivek\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Crawler"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files/Git/mingw64"
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/msys64/ucrt64"
+        - "C:/Program Files (x86)/Crawler"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/boost_system-config.cmake:25 (find_dependency)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:67 (find_package)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:128 (boostcfg_find_component)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindBoost.cmake:610 (find_package)"
+      - "CMakeLists.txt:20 (find_package)"
+    name: "boost_winapi"
+    configs:
+      -
+        filename: "boost_winapi.cps"
+        kind: "cps"
+      -
+        filename: "boost_winapiConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "boost_winapi-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.91.0"
+      version_complete: "1.91.0"
+      exact: true
+    settings:
+      required: "required_explicit"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/.."
+      names:
+        - "boost_winapi"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_winapiConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_winapi-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/lib/cps/boost_winapi.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/share/cps/boost_winapi.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_winapiConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_winapi-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_winapi-1.91.0/boost_winapiConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/msys64/ucrt64/lib/cmake/boost_winapi-1.91.0/boost_winapi-config.cmake"
+      mode: "config"
+      version: "1.91.0"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310\\Scripts"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310"
+        - "C:\\Users\\vivek\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Crawler"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files/Git/mingw64"
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/msys64/ucrt64"
+        - "C:/Program Files (x86)/Crawler"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:67 (find_package)"
+      - "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake:128 (boostcfg_find_component)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindBoost.cmake:610 (find_package)"
+      - "CMakeLists.txt:20 (find_package)"
+    name: "boost_system"
+    configs:
+      -
+        filename: "boost_system.cps"
+        kind: "cps"
+      -
+        filename: "boost_systemConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "boost_system-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.91.0"
+      version_complete: "1.91.0"
+      exact: true
+    settings:
+      required: "required_explicit"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "C:/msys64/ucrt64/lib/cmake"
+      names:
+        - "boost_system"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/lib/cps/boost_system.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/share/cps/boost_system.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/boost_system-config.cmake"
+      mode: "config"
+      version: "1.91.0"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310\\Scripts"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310"
+        - "C:\\Users\\vivek\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Crawler"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files/Git/mingw64"
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/msys64/ucrt64"
+        - "C:/Program Files (x86)/Crawler"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindBoost.cmake:610 (find_package)"
+      - "CMakeLists.txt:20 (find_package)"
+    name: "Boost"
+    components:
+      -
+        name: "system"
+        required: true
+        found: true
+    configs:
+      -
+        filename: "Boost.cps"
+        kind: "cps"
+      -
+        filename: "boost.cps"
+        kind: "cps"
+      -
+        filename: "BoostConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "boost-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Boost"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/lib/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/lib/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/share/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/projects/Crawler/build/CMakeFiles/pkgRedirects/share/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/vivek/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/vivek/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/vivek/lib/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/vivek/lib/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/vivek/share/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/vivek/share/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/mingw64/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/mingw64/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/mingw64/lib/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/mingw64/lib/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/mingw64/share/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/mingw64/share/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/usr/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/usr/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/usr/lib/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/usr/lib/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/usr/share/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/usr/share/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Common Files/Oracle/Java/javapath/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Common Files/Oracle/Java/javapath/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Common Files/Oracle/Java/javapath/lib/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Common Files/Oracle/Java/javapath/lib/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Common Files/Oracle/Java/javapath/share/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Common Files/Oracle/Java/javapath/share/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/lib/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/lib/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/share/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/share/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/lib/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/lib/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/share/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/share/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/lib/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/lib/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/share/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/share/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/lib/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/lib/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/share/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/share/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/lib/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/lib/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/share/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/share/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Java/jdk-22/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Java/jdk-22/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Java/jdk-22/lib/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Java/jdk-22/lib/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Java/jdk-22/share/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Java/jdk-22/share/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/MySQL/MySQL Server 8.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/MySQL/MySQL Server 8.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/MySQL/MySQL Server 8.0/lib/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/MySQL/MySQL Server 8.0/lib/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/MySQL/MySQL Server 8.0/share/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/MySQL/MySQL Server 8.0/share/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/lib/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/lib/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/share/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/share/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/share/cps/Boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/share/cps/boost.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_yap-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_yap-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_xpressive-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_xpressive-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_wserialization-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_wserialization-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_wserialization-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_wserialization-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_winapi-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_winapi-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_wave-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_wave-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_wave-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_wave-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_vmd-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_vmd-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_variant2-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_variant2-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_variant-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_variant-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_uuid-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_uuid-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_utility-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_utility-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_url-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_url-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_url-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_url-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_unordered-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_unordered-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_units-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_units-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_unit_test_framework-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_unit_test_framework-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_unit_test_framework-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_unit_test_framework-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_typeof-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_typeof-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_type_traits-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_type_traits-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_type_index-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_type_index-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_type_erasure-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_type_erasure-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_type_erasure-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_type_erasure-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_tuple-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_tuple-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_tti-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_tti-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_tokenizer-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_tokenizer-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_timer-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_timer-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_timer-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_timer-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_throw_exception-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_throw_exception-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_thread-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_thread-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_thread-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_thread-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_test_exec_monitor-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_test_exec_monitor-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_system-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stl_interfaces-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stl_interfaces-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_static_string-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_static_string-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_static_assert-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_static_assert-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_statechart-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_statechart-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_windbg_cached-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_windbg_cached-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_windbg_cached-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_windbg_cached-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_windbg-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_windbg-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_windbg-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_windbg-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_noop-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_noop-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_noop-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_noop-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_basic-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_basic-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_basic-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace_basic-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_stacktrace-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_spirit-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_spirit-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_sort-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_sort-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_smart_ptr-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_smart_ptr-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_signals2-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_signals2-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_serialization-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_serialization-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_serialization-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_serialization-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_scope_exit-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_scope_exit-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_scope-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_scope-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_safe_numerics-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_safe_numerics-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_regex-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_regex-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_redis-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_redis-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_rational-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_rational-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_ratio-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_ratio-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_range-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_range-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_random-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_random-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_random-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_random-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_qvm-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_qvm-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_python314-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_python314-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_python-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_python-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_ptr_container-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_ptr_container-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_proto-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_proto-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_property_tree-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_property_tree-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_property_map-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_property_map-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_program_options-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_program_options-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_program_options-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_program_options-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_process-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_process-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_process-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_process-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_prg_exec_monitor-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_prg_exec_monitor-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_prg_exec_monitor-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_prg_exec_monitor-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_preprocessor-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_preprocessor-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_predef-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_predef-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_pool-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_pool-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_polygon-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_polygon-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_poly_collection-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_poly_collection-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_phoenix-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_phoenix-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_pfr-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_pfr-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_parser-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_parser-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_parameter_python-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_parameter_python-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_parameter-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_parameter-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_outcome-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_outcome-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_optional-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_optional-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_openmethod-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_openmethod-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_numpy314-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_numpy314-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_numpy-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_numpy-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_numeric_ublas-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_numeric_ublas-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_numeric_odeint-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_numeric_odeint-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_numeric_interval-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_numeric_interval-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_numeric_conversion-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_numeric_conversion-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_nowide-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_nowide-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_nowide-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_nowide-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_mysql-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_mysql-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_multiprecision-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_multiprecision-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_multi_index-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_multi_index-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_multi_array-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_multi_array-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_msm-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_msm-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_mqtt5-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_mqtt5-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_mpl-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_mpl-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_mp11-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_mp11-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_move-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_move-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_metaparse-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_metaparse-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_math-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_math-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_logic-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_logic-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_log_setup-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_log_setup-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_log_setup-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_log_setup-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_log-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_log-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_log-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_log-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_lockfree-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_lockfree-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_locale-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_locale-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_locale-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_locale-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_local_function-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_local_function-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_lexical_cast-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_lexical_cast-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_leaf-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_leaf-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_lambda2-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_lambda2-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_lambda-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_lambda-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_json-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_json-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_json-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_json-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_iterator-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_iterator-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_iostreams-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_iostreams-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_iostreams-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_iostreams-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_io-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_io-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_intrusive-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_intrusive-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_interprocess-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_interprocess-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_integer-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_integer-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_included_unit_test_framework-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_included_unit_test_framework-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_included_test_exec_monitor-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_included_test_exec_monitor-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_included_prg_exec_monitor-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_included_prg_exec_monitor-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_icl-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_icl-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_hof-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_hof-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_histogram-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_histogram-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_heap-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_heap-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_headers-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_headers-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_hash2-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_hash2-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_hana-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_hana-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_graph-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_graph-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_graph-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_graph-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_gil-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_gil-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_geometry-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_geometry-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_fusion-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_fusion-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_functional-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_functional-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_function_types-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_function_types-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_function-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_function-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_format-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_format-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_foreach-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_foreach-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_flyweight-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_flyweight-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_filesystem-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_filesystem-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_filesystem-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_filesystem-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_fiber_numa-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_fiber_numa-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_fiber_numa-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_fiber_numa-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_fiber-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_fiber-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_fiber-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_fiber-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_exception-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_exception-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_endian-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_endian-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_dynamic_bitset-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_dynamic_bitset-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_dll_std_fs-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_dll_std_fs-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_dll_boost_fs-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_dll_boost_fs-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_dll_base-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_dll_base-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_dll-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_dll-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_detail-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_detail-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_describe-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_describe-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_decimal-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_decimal-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_date_time-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_date_time-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_date_time-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_date_time-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_crc-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_crc-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_coroutine2-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_coroutine2-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_coroutine-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_coroutine-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_coroutine-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_coroutine-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_core-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_core-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_convert-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_convert-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_conversion-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_conversion-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_contract-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_contract-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_contract-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_contract-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_context-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_context-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_context-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_context-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_container_hash-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_container_hash-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_container-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_container-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_container-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_container-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_config-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_config-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_concept_check-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_concept_check-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_compute-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_compute-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_compat-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_compat-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_cobalt-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_cobalt-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_cobalt-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_cobalt-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_circular_buffer-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_circular_buffer-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_chrono-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_chrono-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_chrono-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_chrono-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_charconv-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_charconv-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_charconv-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_charconv-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_callable_traits-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_callable_traits-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_bloom-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_bloom-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_bind-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_bind-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_bimap-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_bimap-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_beast-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_beast-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_atomic-1.91.0-static/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_atomic-1.91.0-static/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_atomic-1.91.0-shared/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_atomic-1.91.0-shared/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_assign-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_assign-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_assert-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_assert-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_asio_spawn-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_asio_spawn-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_asio_deadline_timer-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_asio_deadline_timer-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_asio_core-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_asio_core-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_asio-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_asio-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_array-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_array-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_any-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_any-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_align-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_align-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_algorithm-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_algorithm-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_accumulators-1.91.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/msys64/ucrt64/lib/cmake/boost_accumulators-1.91.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/msys64/ucrt64/lib/cmake/Boost-1.91.0/BoostConfig.cmake"
+      mode: "config"
+      version: "1.91.0"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310\\Scripts"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310"
+        - "C:\\Users\\vivek\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Crawler"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files/Git/mingw64"
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/msys64/ucrt64"
+        - "C:/Program Files (x86)/Crawler"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindBoost.cmake:538 (find_path)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindBoost.cmake:643 (_boost_set_legacy_variables_from_config)"
+      - "CMakeLists.txt:20 (find_package)"
+    mode: "path"
+    variable: "Boost_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "boost/version.hpp"
+      - "boost/config.hpp"
+    candidate_directories:
+      - "C:/msys64/ucrt64/include/"
+    found: "C:/msys64/ucrt64/include/"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\local\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Users\\vivek\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0"
+        - "C:\\WINDOWS\\System32\\OpenSSH"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310\\Scripts"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Python\\Python310"
+        - "C:\\Users\\vivek\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\Java\\jdk-22\\bin"
+        - "C:\\Users\\vivek\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin\\vendor_perl"
+        - "C:\\Program Files\\Git\\usr\\bin\\core_perl"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Crawler"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files/Git/mingw64"
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/msys64/ucrt64"
+        - "C:/Program Files (x86)/Crawler"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/msys64/ucrt64/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:138 (try_compile)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindThreads.cmake:160 (check_c_source_compiles)"
+      - "C:/msys64/ucrt64/share/cmake/Modules/FindThreads.cmake:226 (_threads_check_libc)"
+      - "CMakeLists.txt:21 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "D:/projects/Crawler/build/CMakeFiles/CMakeScratch/TryCompile-gb9exk"
+      binary: "D:/projects/Crawler/build/CMakeFiles/CMakeScratch/TryCompile-gb9exk"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/projects/Crawler/build/CMakeFiles/CMakeScratch/TryCompile-gb9exk'
+        
+        Run Build Command(s): C:/msys64/ucrt64/bin/cmake.exe -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_ffe9a/fast
+        mingw32-make[1]: Entering directory 'D:/projects/Crawler/build/CMakeFiles/CMakeScratch/TryCompile-gb9exk'
+        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_ffe9a.dir\\build.make CMakeFiles/cmTC_ffe9a.dir/build
+        mingw32-make[2]: Entering directory 'D:/projects/Crawler/build/CMakeFiles/CMakeScratch/TryCompile-gb9exk'
+        Building C object CMakeFiles/cmTC_ffe9a.dir/src.c.obj
+        C:\\msys64\\ucrt64\\bin\\cc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\\cmTC_ffe9a.dir\\src.c.obj -c D:\\projects\\Crawler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gb9exk\\src.c
+        Linking C executable cmTC_ffe9a.exe
+        C:\\msys64\\ucrt64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_ffe9a.dir\\link.txt --verbose=1
+        C:\\msys64\\ucrt64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_ffe9a.dir/objects.a
+        C:\\msys64\\ucrt64\\bin\\ar.exe qc CMakeFiles\\cmTC_ffe9a.dir/objects.a @CMakeFiles\\cmTC_ffe9a.dir\\objects1.rsp
+        C:\\msys64\\ucrt64\\bin\\cc.exe -Wl,--whole-archive CMakeFiles\\cmTC_ffe9a.dir/objects.a -Wl,--no-whole-archive -o cmTC_ffe9a.exe -Wl,--out-implib,libcmTC_ffe9a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_ffe9a.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'D:/projects/Crawler/build/CMakeFiles/CMakeScratch/TryCompile-gb9exk'
+        mingw32-make[1]: Leaving directory 'D:/projects/Crawler/build/CMakeFiles/CMakeScratch/TryCompile-gb9exk'
+        
+      exitCode: 0
+...

@@ -1,0 +1,5 @@
+if(EXISTS "D:/projects/Crawler/build/URLValidatorTests_e3b0c442_tests.cmake")
+  include("D:/projects/Crawler/build/URLValidatorTests_e3b0c442_tests.cmake")
+else()
+  add_test(URLValidatorTests_NOT_BUILT URLValidatorTests_NOT_BUILT)
+endif()

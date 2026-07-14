@@ -1,0 +1,5 @@
+if(EXISTS "D:/projects/Crawler/build/URLFrontierTests_e3b0c442_tests.cmake")
+  include("D:/projects/Crawler/build/URLFrontierTests_e3b0c442_tests.cmake")
+else()
+  add_test(URLFrontierTests_NOT_BUILT URLFrontierTests_NOT_BUILT)
+endif()

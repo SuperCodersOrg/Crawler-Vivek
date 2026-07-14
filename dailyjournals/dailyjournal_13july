@@ -1,0 +1,643 @@
+# Daily Development Journal
+
+**Date:** July 13, 2026  
+**Project:** C++ Web Crawler  
+**Focus:** Crawler Controller Integration and End-to-End Pipeline Testing  
+
+---
+
+# Section 1 — Specific Bug
+
+Today's main objective was to integrate all previously implemented crawler components into a central `Crawler` controller.
+
+The components available before integration were:
+
+- `URLValidator`
+- `URLNormalizer`
+- `SeenStorage`
+- `URLFrontier`
+- `Fetcher`
+- `FrameworkDetector`
+- `RenderEngine`
+- `PageStorage`
+- `HTMLParser`
+
+The `Crawler` class was created to coordinate these components and control the complete crawling lifecycle.
+
+---
+
+## Bug 1: Database Password Environment Variable Missing
+
+### Exact Runtime Error
+
+```text
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  CRAWLER_DB_PASSWORD environment variable is not set
+```
+
+### Context
+
+After building the project, I ran:
+
+```bash
+./build/crawler.exe
+```
+
+The program terminated before crawling started.
+
+The `Crawler` class contains a `PageStorage` object. When a `Crawler` object is created, its member objects are also constructed.
+
+```text
+main()
+   |
+   v
+Crawler crawler(maxDepth)
+   |
+   v
+PageStorage Constructor
+   |
+   v
+Read CRAWLER_DB_PASSWORD
+   |
+   v
+Environment variable missing
+   |
+   v
+Runtime Error
+```
+
+The `PageStorage` constructor expects the MySQL password through:
+
+```text
+CRAWLER_DB_PASSWORD
+```
+
+### Resolution
+
+The password must be available in the active terminal:
+
+```bash
+export CRAWLER_DB_PASSWORD="your_password"
+```
+
+The value can be checked using:
+
+```bash
+echo $CRAWLER_DB_PASSWORD
+```
+
+This error showed that integration can introduce constructor-level dependencies. The crawler cannot even start if one of its required member components fails during construction.
+
+---
+
+## Bug 2: Crawler Appeared to Hang
+
+After resolving the environment-variable issue, the crawler was executed again.
+
+The terminal showed no output and appeared to remain in a running state.
+
+There was no exact crash message because the program had no runtime logging.
+
+The possible blocking locations included:
+
+```text
+Crawler construction
+        |
+        v
+Fetcher network request
+        |
+        v
+Framework detection
+        |
+        v
+RenderEngine / CDP connection
+        |
+        v
+PageStorage database operation
+        |
+        v
+HTML parsing
+```
+
+The main problem was not immediately knowing whether the crawler was actually hanging or simply performing a long-running operation.
+
+### Debugging Approach
+
+Logging was needed around important execution stages:
+
+```cpp
+std::cout << "Before crawler object\n";
+
+Crawler crawler(2);
+
+std::cout << "Before crawl\n";
+
+crawler.crawl("https://example.com");
+
+std::cout << "After crawl\n";
+```
+
+More detailed logs can later be added inside `crawl()`:
+
+```cpp
+std::cout << "Fetching: " << currentNode.url << "\n";
+```
+
+and:
+
+```cpp
+std::cout << "Page stored successfully\n";
+```
+
+This makes it possible to identify the exact component where execution stops.
+
+---
+
+## Bug 3: Incorrect Executable Path
+
+While already inside the build directory:
+
+```text
+/d/projects/Crawler/build
+```
+
+the executable path was initially confused.
+
+From the project root, the correct command is:
+
+```bash
+./build/crawler.exe
+```
+
+From inside the `build` directory, the correct command is:
+
+```bash
+./crawler.exe
+```
+
+The relative path depends on the current working directory.
+
+---
+
+## Bug 4: Linker Failure After Updating `main.cpp`
+
+After modifying `main.cpp`, the project was rebuilt:
+
+```bash
+cmake --build .
+```
+
+The build produced:
+
+```text
+[ 10%] Built target CollectionsLib
+[ 12%] Building CXX object CMakeFiles/Crawler.dir/main.cpp.obj
+[ 15%] Linking CXX executable Crawler.exe
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[2]: *** [CMakeFiles\Crawler.dir\build.make:291: Crawler.exe] Error 1
+mingw32-make[1]: *** [CMakeFiles\Makefile2:198: CMakeFiles/Crawler.dir/all] Error 2
+mingw32-make: *** [Makefile:135: all] Error 2
+```
+
+The important observation was:
+
+```text
+Building CXX object CMakeFiles/Crawler.dir/main.cpp.obj
+```
+
+completed successfully.
+
+The failure occurred during:
+
+```text
+Linking CXX executable Crawler.exe
+```
+
+Therefore, this was a linker error rather than a normal C++ syntax error.
+
+The final line:
+
+```text
+collect2.exe: error: ld returned 1 exit status
+```
+
+does not provide the actual root cause.
+
+The useful error usually appears before this line.
+
+The next debugging command is:
+
+```bash
+cmake --build . --verbose
+```
+
+This should reveal whether the actual problem is:
+
+```text
+undefined reference
+missing source file
+missing implementation
+missing library
+incorrect linker configuration
+```
+
+---
+
+# Section 2 — Failed Attempt
+
+## Failed Attempt 1: Running Without Database Configuration
+
+I initially tried to run the crawler directly after building it.
+
+This failed because the `PageStorage` constructor required:
+
+```text
+CRAWLER_DB_PASSWORD
+```
+
+The important realization was that `PageStorage` is constructed when the `Crawler` object is created.
+
+Therefore:
+
+```cpp
+Crawler crawler(2);
+```
+
+can fail before:
+
+```cpp
+crawler.crawl(seedURL);
+```
+
+is ever executed.
+
+---
+
+## Failed Attempt 2: Assuming No Terminal Output Means a Hang
+
+When the crawler produced no output, I initially considered it to be stuck.
+
+However, the crawler had no logs showing its current execution stage.
+
+Without logging, these situations look identical:
+
+```text
+Fetching a slow URL
+Waiting for CDP
+Connecting to MySQL
+Processing HTML
+Actually blocked
+```
+
+The better approach is to add logs around component boundaries rather than guessing where the program stopped.
+
+---
+
+## Failed Attempt 3: Looking Only at `ld returned 1 exit status`
+
+The final linker message was:
+
+```text
+collect2.exe: error: ld returned 1 exit status
+```
+
+This message only confirms that linking failed.
+
+It does not identify the missing symbol or library.
+
+The correct approach is to inspect the complete linker output or rebuild using:
+
+```bash
+cmake --build . --verbose
+```
+
+---
+
+# Section 3 — Memory Diagram
+
+The main architectural change today was creating the `Crawler` controller.
+
+```text
++------------------------------------------------+
+|                    Crawler                     |
+|------------------------------------------------|
+| int maxDepth                                   |
+|                                                |
+| URLNormalizer normalizer                       |
+| SeenStorage seenstorage                        |
+| URLFrontier frontier                           |
+| Fetcher fetcher                                |
+| FrameworkDetector frameworkDetector            |
+| RenderEngine renderEngine                      |
+| PageStorage pageStorage                        |
+| HTMLParser htmlParser                          |
++------------------------------------------------+
+```
+
+The complete integrated flow is:
+
+```text
+                    Seed URL
+                       |
+                       v
+                URLValidator
+                       |
+                       v
+                URLNormalizer
+                       |
+                       v
+                 SeenStorage
+                       |
+                       v
+                 URLFrontier
+                       |
+                       v
+                    Fetcher
+                       |
+                       v
+                  FetchResult
+                       |
+                       v
+              FrameworkDetector
+                       |
+             +---------+---------+
+             |                   |
+             v                   v
+        Static HTML         JS Framework
+             |                   |
+             |                   v
+             |              RenderEngine
+             |                   |
+             +---------+---------+
+                       |
+                       v
+                   finalHTML
+                       |
+                       v
+                  PageStorage
+                       |
+                       v
+                   HTMLParser
+                       |
+                       v
+                Extracted Links
+                       |
+                       v
+              Validate + Normalize
+                       |
+                       v
+                 SeenStorage
+                       |
+                       v
+                 URLFrontier
+                       |
+                       v
+                     Repeat
+```
+
+Each URL is represented using:
+
+```cpp
+struct URLNode {
+  std::string url;
+  int depth;
+  int retryCount;
+};
+```
+
+Example:
+
+```text
++------------------------------------+
+| URLNode                            |
+|------------------------------------|
+| url        = https://example.com   |
+| depth      = 1                     |
+| retryCount = 0                     |
++------------------------------------+
+```
+
+Depth progression:
+
+```text
+Seed URL
+Depth 0
+   |
+   +------> URL A
+   |        Depth 1
+   |
+   +------> URL B
+            Depth 1
+               |
+               +------> URL C
+                        Depth 2
+```
+
+The crawler stores:
+
+```cpp
+int maxDepth;
+```
+
+while every `URLNode` stores its own:
+
+```cpp
+int depth;
+```
+
+If:
+
+```cpp
+currentNode.depth >= maxDepth
+```
+
+the current page can still be stored, but its links are not added to the frontier.
+
+---
+
+# Section 4 — Code Reference
+
+**Commit Hash:** `[Add commit hash after commit]`
+
+**Suggested Commit Message:**
+
+```text
+feat: integrate crawler components into complete crawling pipeline
+```
+
+**Primary File:** `src/crawler.cpp`  
+**Header File:** `include/crawler.h`  
+**Relevant Lines:** `[Add final line numbers after commit]`
+
+The central crawler integration follows this structure:
+
+```cpp
+Crawler::Crawler(int maxDepth) : maxDepth(maxDepth) {}
+```
+
+The seed URL is first validated:
+
+```cpp
+if (!URLValidator::isValid(seedURL)) {
+  return;
+}
+```
+
+It is then normalized:
+
+```cpp
+std::string normalizedURL = normalizer.normalize(seedURL);
+```
+
+Duplicate URLs are rejected:
+
+```cpp
+if (!seenstorage.addSeenURL(normalizedURL)) {
+  return;
+}
+```
+
+The initial node is created:
+
+```cpp
+URLNode seedNode(normalizedURL, 0, 0);
+frontier.addURL(seedNode);
+```
+
+The crawler processes URLs until the frontier becomes empty:
+
+```cpp
+while (!frontier.isEmpty()) {
+  URLNode currentNode = frontier.getNextURL();
+```
+
+The page is fetched:
+
+```cpp
+FetchResult result = fetcher.fetch(currentNode.url);
+
+if (!result.success) {
+  continue;
+}
+```
+
+The framework is detected:
+
+```cpp
+FrameworkType framework =
+    frameworkDetector.detect(result);
+```
+
+The fetched HTML is used by default:
+
+```cpp
+std::string finalHTML = result.html;
+```
+
+For non-static pages, the render engine is used:
+
+```cpp
+if (framework != FrameworkType::STATIC_HTML) {
+
+  if (!renderEngine.createTab(currentNode.url)) {
+    continue;
+  }
+
+  if (!renderEngine.connect()) {
+    continue;
+  }
+
+  if (!renderEngine.navigate(currentNode.url)) {
+    renderEngine.disconnect();
+    continue;
+  }
+
+  finalHTML = renderEngine.getRenderedHTML();
+
+  renderEngine.disconnect();
+}
+```
+
+The final HTML is stored:
+
+```cpp
+if (!pageStorage.storePage(
+        currentNode.url,
+        finalHTML,
+        currentNode.depth)) {
+  continue;
+}
+```
+
+Before extracting more links, the depth is checked:
+
+```cpp
+if (currentNode.depth >= maxDepth) {
+  continue;
+}
+```
+
+Links are extracted:
+
+```cpp
+std::vector<std::string> extractedLinks =
+    htmlParser.extractLinks(
+        finalHTML,
+        currentNode.url
+    );
+```
+
+Each extracted URL follows:
+
+```text
+Validate
+   |
+   v
+Normalize
+   |
+   v
+Duplicate Check
+   |
+   v
+Create URLNode
+   |
+   v
+Add to Frontier
+```
+
+The implementation is:
+
+```cpp
+for (const std::string &link : extractedLinks) {
+
+  if (!URLValidator::isValid(link)) {
+    continue;
+  }
+
+  std::string normalizedLink =
+      normalizer.normalize(link);
+
+  if (!seenstorage.addSeenURL(normalizedLink)) {
+    continue;
+  }
+
+  URLNode newNode(
+      normalizedLink,
+      currentNode.depth + 1,
+      0
+  );
+
+  frontier.addURL(newNode);
+}
+```
+
+This completes the first integrated crawler loop.
+
+---
+
+# Section 5 — Learning Reflection
+
+The main change in my understanding today was the difference between implementing individual components and integrating them into one working system.
+
+Before today, components such as `Fetcher`, `HTMLParser`, `URLFrontier`, and `PageStorage` worked as separate modules.
+

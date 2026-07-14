@@ -1,0 +1,5 @@
+if(EXISTS "D:/projects/Crawler/build/URLNormalizerTests_e3b0c442_tests.cmake")
+  include("D:/projects/Crawler/build/URLNormalizerTests_e3b0c442_tests.cmake")
+else()
+  add_test(URLNormalizerTests_NOT_BUILT URLNormalizerTests_NOT_BUILT)
+endif()

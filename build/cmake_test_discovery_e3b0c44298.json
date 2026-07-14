@@ -1,0 +1,77 @@
+{
+  "tests": 13,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "URLFrontierTest",
+      "tests": 13,
+      "testsuite": [
+        {
+          "name": "IsEmptyWhenCreated",
+          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "line": 5
+        },
+        {
+          "name": "AddsSingleURL",
+          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "line": 12
+        },
+        {
+          "name": "GetsAddedURL",
+          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "line": 21
+        },
+        {
+          "name": "PreservesDepth",
+          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "line": 31
+        },
+        {
+          "name": "PreservesRetryCount",
+          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "line": 41
+        },
+        {
+          "name": "MaintainsFIFOOrder",
+          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "line": 51
+        },
+        {
+          "name": "GetNextURLRemovesURL",
+          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "line": 63
+        },
+        {
+          "name": "PeekReturnsNextURL",
+          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "line": 76
+        },
+        {
+          "name": "PeekDoesNotRemoveURL",
+          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "line": 88
+        },
+        {
+          "name": "ClearRemovesAllURLs",
+          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "line": 99
+        },
+        {
+          "name": "CanReuseFrontierAfterClear",
+          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "line": 112
+        },
+        {
+          "name": "GetNextURLFromEmptyFrontierThrowsException",
+          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "line": 124
+        },
+        {
+          "name": "PeekFromEmptyFrontierThrowsException",
+          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "line": 130
+        }
+      ]
+    }
+  ]
+}

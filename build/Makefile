@@ -64,6 +64,16 @@ CMAKE_BINARY_DIR = D:\projects\Crawler\build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	C:\msys64\ucrt64\bin\ctest.exe $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -172,6 +182,45 @@ Crawler: cmake_check_build_system
 Crawler/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/build
 .PHONY : Crawler/fast
+
+#=============================================================================
+# Target rules for targets named URLValidatorTests
+
+# Build rule for target.
+URLValidatorTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 URLValidatorTests
+.PHONY : URLValidatorTests
+
+# fast build rule for target.
+URLValidatorTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLValidatorTests.dir\build.make CMakeFiles/URLValidatorTests.dir/build
+.PHONY : URLValidatorTests/fast
+
+#=============================================================================
+# Target rules for targets named URLNormalizerTests
+
+# Build rule for target.
+URLNormalizerTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 URLNormalizerTests
+.PHONY : URLNormalizerTests
+
+# fast build rule for target.
+URLNormalizerTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLNormalizerTests.dir\build.make CMakeFiles/URLNormalizerTests.dir/build
+.PHONY : URLNormalizerTests/fast
+
+#=============================================================================
+# Target rules for targets named URLFrontierTests
+
+# Build rule for target.
+URLFrontierTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 URLFrontierTests
+.PHONY : URLFrontierTests
+
+# fast build rule for target.
+URLFrontierTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLFrontierTests.dir\build.make CMakeFiles/URLFrontierTests.dir/build
+.PHONY : URLFrontierTests/fast
 
 #=============================================================================
 # Target rules for targets named CollectionsLib
@@ -407,6 +456,7 @@ src/URLfrontier.obj: src/URLfrontier.cpp.obj
 # target to build an object file
 src/URLfrontier.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/URLfrontier.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLFrontierTests.dir\build.make CMakeFiles/URLFrontierTests.dir/src/URLfrontier.cpp.obj
 .PHONY : src/URLfrontier.cpp.obj
 
 src/URLfrontier.i: src/URLfrontier.cpp.i
@@ -415,6 +465,7 @@ src/URLfrontier.i: src/URLfrontier.cpp.i
 # target to preprocess a source file
 src/URLfrontier.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/URLfrontier.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLFrontierTests.dir\build.make CMakeFiles/URLFrontierTests.dir/src/URLfrontier.cpp.i
 .PHONY : src/URLfrontier.cpp.i
 
 src/URLfrontier.s: src/URLfrontier.cpp.s
@@ -423,6 +474,7 @@ src/URLfrontier.s: src/URLfrontier.cpp.s
 # target to generate assembly for a file
 src/URLfrontier.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/URLfrontier.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLFrontierTests.dir\build.make CMakeFiles/URLFrontierTests.dir/src/URLfrontier.cpp.s
 .PHONY : src/URLfrontier.cpp.s
 
 src/URLnormalizer.obj: src/URLnormalizer.cpp.obj
@@ -431,6 +483,7 @@ src/URLnormalizer.obj: src/URLnormalizer.cpp.obj
 # target to build an object file
 src/URLnormalizer.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/URLnormalizer.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLNormalizerTests.dir\build.make CMakeFiles/URLNormalizerTests.dir/src/URLnormalizer.cpp.obj
 .PHONY : src/URLnormalizer.cpp.obj
 
 src/URLnormalizer.i: src/URLnormalizer.cpp.i
@@ -439,6 +492,7 @@ src/URLnormalizer.i: src/URLnormalizer.cpp.i
 # target to preprocess a source file
 src/URLnormalizer.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/URLnormalizer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLNormalizerTests.dir\build.make CMakeFiles/URLNormalizerTests.dir/src/URLnormalizer.cpp.i
 .PHONY : src/URLnormalizer.cpp.i
 
 src/URLnormalizer.s: src/URLnormalizer.cpp.s
@@ -447,6 +501,7 @@ src/URLnormalizer.s: src/URLnormalizer.cpp.s
 # target to generate assembly for a file
 src/URLnormalizer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/URLnormalizer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLNormalizerTests.dir\build.make CMakeFiles/URLNormalizerTests.dir/src/URLnormalizer.cpp.s
 .PHONY : src/URLnormalizer.cpp.s
 
 src/URLvalidator.obj: src/URLvalidator.cpp.obj
@@ -455,6 +510,7 @@ src/URLvalidator.obj: src/URLvalidator.cpp.obj
 # target to build an object file
 src/URLvalidator.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/URLvalidator.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLValidatorTests.dir\build.make CMakeFiles/URLValidatorTests.dir/src/URLvalidator.cpp.obj
 .PHONY : src/URLvalidator.cpp.obj
 
 src/URLvalidator.i: src/URLvalidator.cpp.i
@@ -463,6 +519,7 @@ src/URLvalidator.i: src/URLvalidator.cpp.i
 # target to preprocess a source file
 src/URLvalidator.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/URLvalidator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLValidatorTests.dir\build.make CMakeFiles/URLValidatorTests.dir/src/URLvalidator.cpp.i
 .PHONY : src/URLvalidator.cpp.i
 
 src/URLvalidator.s: src/URLvalidator.cpp.s
@@ -471,7 +528,32 @@ src/URLvalidator.s: src/URLvalidator.cpp.s
 # target to generate assembly for a file
 src/URLvalidator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/URLvalidator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLValidatorTests.dir\build.make CMakeFiles/URLValidatorTests.dir/src/URLvalidator.cpp.s
 .PHONY : src/URLvalidator.cpp.s
+
+src/crawler.obj: src/crawler.cpp.obj
+.PHONY : src/crawler.obj
+
+# target to build an object file
+src/crawler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/crawler.cpp.obj
+.PHONY : src/crawler.cpp.obj
+
+src/crawler.i: src/crawler.cpp.i
+.PHONY : src/crawler.i
+
+# target to preprocess a source file
+src/crawler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/crawler.cpp.i
+.PHONY : src/crawler.cpp.i
+
+src/crawler.s: src/crawler.cpp.s
+.PHONY : src/crawler.s
+
+# target to generate assembly for a file
+src/crawler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/crawler.cpp.s
+.PHONY : src/crawler.cpp.s
 
 src/fetcher.obj: src/fetcher.cpp.obj
 .PHONY : src/fetcher.obj
@@ -593,6 +675,78 @@ src/seenstorage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/seenstorage.cpp.s
 .PHONY : src/seenstorage.cpp.s
 
+testing/URLfrontier_testing.obj: testing/URLfrontier_testing.cpp.obj
+.PHONY : testing/URLfrontier_testing.obj
+
+# target to build an object file
+testing/URLfrontier_testing.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLFrontierTests.dir\build.make CMakeFiles/URLFrontierTests.dir/testing/URLfrontier_testing.cpp.obj
+.PHONY : testing/URLfrontier_testing.cpp.obj
+
+testing/URLfrontier_testing.i: testing/URLfrontier_testing.cpp.i
+.PHONY : testing/URLfrontier_testing.i
+
+# target to preprocess a source file
+testing/URLfrontier_testing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLFrontierTests.dir\build.make CMakeFiles/URLFrontierTests.dir/testing/URLfrontier_testing.cpp.i
+.PHONY : testing/URLfrontier_testing.cpp.i
+
+testing/URLfrontier_testing.s: testing/URLfrontier_testing.cpp.s
+.PHONY : testing/URLfrontier_testing.s
+
+# target to generate assembly for a file
+testing/URLfrontier_testing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLFrontierTests.dir\build.make CMakeFiles/URLFrontierTests.dir/testing/URLfrontier_testing.cpp.s
+.PHONY : testing/URLfrontier_testing.cpp.s
+
+testing/URLnormalizer_testing.obj: testing/URLnormalizer_testing.cpp.obj
+.PHONY : testing/URLnormalizer_testing.obj
+
+# target to build an object file
+testing/URLnormalizer_testing.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLNormalizerTests.dir\build.make CMakeFiles/URLNormalizerTests.dir/testing/URLnormalizer_testing.cpp.obj
+.PHONY : testing/URLnormalizer_testing.cpp.obj
+
+testing/URLnormalizer_testing.i: testing/URLnormalizer_testing.cpp.i
+.PHONY : testing/URLnormalizer_testing.i
+
+# target to preprocess a source file
+testing/URLnormalizer_testing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLNormalizerTests.dir\build.make CMakeFiles/URLNormalizerTests.dir/testing/URLnormalizer_testing.cpp.i
+.PHONY : testing/URLnormalizer_testing.cpp.i
+
+testing/URLnormalizer_testing.s: testing/URLnormalizer_testing.cpp.s
+.PHONY : testing/URLnormalizer_testing.s
+
+# target to generate assembly for a file
+testing/URLnormalizer_testing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLNormalizerTests.dir\build.make CMakeFiles/URLNormalizerTests.dir/testing/URLnormalizer_testing.cpp.s
+.PHONY : testing/URLnormalizer_testing.cpp.s
+
+testing/URLvalidator_testing.obj: testing/URLvalidator_testing.cpp.obj
+.PHONY : testing/URLvalidator_testing.obj
+
+# target to build an object file
+testing/URLvalidator_testing.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLValidatorTests.dir\build.make CMakeFiles/URLValidatorTests.dir/testing/URLvalidator_testing.cpp.obj
+.PHONY : testing/URLvalidator_testing.cpp.obj
+
+testing/URLvalidator_testing.i: testing/URLvalidator_testing.cpp.i
+.PHONY : testing/URLvalidator_testing.i
+
+# target to preprocess a source file
+testing/URLvalidator_testing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLValidatorTests.dir\build.make CMakeFiles/URLValidatorTests.dir/testing/URLvalidator_testing.cpp.i
+.PHONY : testing/URLvalidator_testing.cpp.i
+
+testing/URLvalidator_testing.s: testing/URLvalidator_testing.cpp.s
+.PHONY : testing/URLvalidator_testing.s
+
+# target to generate assembly for a file
+testing/URLvalidator_testing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\URLValidatorTests.dir\build.make CMakeFiles/URLValidatorTests.dir/testing/URLvalidator_testing.cpp.s
+.PHONY : testing/URLvalidator_testing.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -605,8 +759,12 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
+	@echo ... test
 	@echo ... CollectionsLib
 	@echo ... Crawler
+	@echo ... URLFrontierTests
+	@echo ... URLNormalizerTests
+	@echo ... URLValidatorTests
 	@echo ... doublylinkedlist_test
 	@echo ... dynamic_array_test
 	@echo ... gmock
@@ -636,6 +794,9 @@ help:
 	@echo ... src/URLvalidator.obj
 	@echo ... src/URLvalidator.i
 	@echo ... src/URLvalidator.s
+	@echo ... src/crawler.obj
+	@echo ... src/crawler.i
+	@echo ... src/crawler.s
 	@echo ... src/fetcher.obj
 	@echo ... src/fetcher.i
 	@echo ... src/fetcher.s
@@ -651,6 +812,15 @@ help:
 	@echo ... src/seenstorage.obj
 	@echo ... src/seenstorage.i
 	@echo ... src/seenstorage.s
+	@echo ... testing/URLfrontier_testing.obj
+	@echo ... testing/URLfrontier_testing.i
+	@echo ... testing/URLfrontier_testing.s
+	@echo ... testing/URLnormalizer_testing.obj
+	@echo ... testing/URLnormalizer_testing.i
+	@echo ... testing/URLnormalizer_testing.s
+	@echo ... testing/URLvalidator_testing.obj
+	@echo ... testing/URLvalidator_testing.i
+	@echo ... testing/URLvalidator_testing.s
 .PHONY : help
 
 

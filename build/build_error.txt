@@ -1,0 +1,34 @@
+Change Dir: 'D:/projects/Crawler/build'
+
+Run Build Command(s): C:/msys64/ucrt64/bin/cmake.exe -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile
+C:\msys64\ucrt64\bin\cmake.exe -SD:\projects\Crawler -BD:\projects\Crawler\build --check-build-system CMakeFiles\Makefile.cmake 0
+C:\msys64\ucrt64\bin\cmake.exe -E cmake_progress_start D:\projects\Crawler\build\CMakeFiles D:\projects\Crawler\build\\CMakeFiles\progress.marks
+C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\Makefile2 all
+mingw32-make[1]: Entering directory 'D:/projects/Crawler/build'
+C:/msys64/ucrt64/bin/mingw32-make.exe  -f ds_library-Vivek\CollectionsLib-RedisLite\CMakeFiles\CollectionsLib.dir\build.make ds_library-Vivek/CollectionsLib-RedisLite/CMakeFiles/CollectionsLib.dir/depend
+mingw32-make[2]: Entering directory 'D:/projects/Crawler/build'
+C:\msys64\ucrt64\bin\cmake.exe -E cmake_depends "MinGW Makefiles" D:\projects\Crawler D:\projects\Crawler\ds_library-Vivek\CollectionsLib-RedisLite D:\projects\Crawler\build D:\projects\Crawler\build\ds_library-Vivek\CollectionsLib-RedisLite D:\projects\Crawler\build\ds_library-Vivek\CollectionsLib-RedisLite\CMakeFiles\CollectionsLib.dir\DependInfo.cmake "--color=" CollectionsLib
+mingw32-make[2]: Leaving directory 'D:/projects/Crawler/build'
+C:/msys64/ucrt64/bin/mingw32-make.exe  -f ds_library-Vivek\CollectionsLib-RedisLite\CMakeFiles\CollectionsLib.dir\build.make ds_library-Vivek/CollectionsLib-RedisLite/CMakeFiles/CollectionsLib.dir/build
+mingw32-make[2]: Entering directory 'D:/projects/Crawler/build'
+mingw32-make[2]: Nothing to be done for 'ds_library-Vivek/CollectionsLib-RedisLite/CMakeFiles/CollectionsLib.dir/build'.
+mingw32-make[2]: Leaving directory 'D:/projects/Crawler/build'
+[ 10%] Built target CollectionsLib
+C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/depend
+mingw32-make[2]: Entering directory 'D:/projects/Crawler/build'
+C:\msys64\ucrt64\bin\cmake.exe -E cmake_depends "MinGW Makefiles" D:\projects\Crawler D:\projects\Crawler D:\projects\Crawler\build D:\projects\Crawler\build D:\projects\Crawler\build\CMakeFiles\Crawler.dir\DependInfo.cmake "--color=" Crawler
+mingw32-make[2]: Leaving directory 'D:/projects/Crawler/build'
+C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/build
+mingw32-make[2]: Entering directory 'D:/projects/Crawler/build'
+[ 12%] Linking CXX executable Crawler.exe
+C:\msys64\ucrt64\bin\cmake.exe -E cmake_link_script CMakeFiles\Crawler.dir\link.txt --verbose=1
+collect2.exe: error: ld returned 5 exit status
+C:\msys64\ucrt64\bin\cmake.exe -E rm -f CMakeFiles\Crawler.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe qc CMakeFiles\Crawler.dir/objects.a @CMakeFiles\Crawler.dir\objects1.rsp
+C:\msys64\ucrt64\bin\c++.exe -Wl,--whole-archive CMakeFiles\Crawler.dir/objects.a -Wl,--no-whole-archive -o Crawler.exe -Wl,--out-implib,libCrawler.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Crawler.dir\linkLibs.rsp
+mingw32-make[2]: *** [CMakeFiles\Crawler.dir\build.make:291: Crawler.exe] Error 1
+mingw32-make[2]: Leaving directory 'D:/projects/Crawler/build'
+mingw32-make[1]: *** [CMakeFiles\Makefile2:198: CMakeFiles/Crawler.dir/all] Error 2
+mingw32-make[1]: Leaving directory 'D:/projects/Crawler/build'
+mingw32-make: *** [Makefile:135: all] Error 2
+

@@ -14,6 +14,12 @@ add_subdirectory(ds_library-Vivek/CollectionsLib-RedisLite)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(LIBCURL REQUIRED IMPORTED_TARGET libcurl)
 
+# -----------------------------
+# Boost
+# -----------------------------
+find_package(Boost REQUIRED COMPONENTS system)
+find_package(Threads REQUIRED)
+
 add_executable(Crawler
     main.cpp
     src/URLfrontier.cpp
@@ -26,6 +32,7 @@ add_executable(Crawler
     src/HTMLparser.cpp
     src/seenstorage.cpp
     src/pagestorage.cpp
+    src/crawler.cpp
 )
 
 target_include_directories(Crawler PRIVATE
@@ -41,6 +48,69 @@ target_link_directories(Crawler PRIVATE
 target_link_libraries(Crawler PRIVATE
     CollectionsLib
     PkgConfig::LIBCURL
+    Boost::system
+    Threads::Threads
     ws2_32
     mariadb
 )
+
+
+# =====================================================
+# UNIT TESTS - ADD THIS AT THE BOTTOM
+# =====================================================
+
+enable_testing()
+
+add_executable(URLValidatorTests
+    testing/URLvalidator_testing.cpp
+    src/URLvalidator.cpp
+)
+
+target_include_directories(URLValidatorTests PRIVATE
+    ${CMAKE_SOURCE_DIR}/include
+)
+
+target_link_libraries(URLValidatorTests PRIVATE
+    GTest::gtest_main
+)
+
+include(GoogleTest)
+gtest_discover_tests(URLValidatorTests)
+
+# URL normalizer
+
+add_executable(URLNormalizerTests
+    testing/URLnormalizer_testing.cpp
+    src/URLnormalizer.cpp
+)
+
+target_include_directories(URLNormalizerTests PRIVATE
+    ${CMAKE_SOURCE_DIR}/include
+)
+
+target_link_libraries(URLNormalizerTests PRIVATE
+    GTest::gtest_main
+)
+
+gtest_discover_tests(URLNormalizerTests)
+
+# URL frontier
+
+add_executable(URLFrontierTests
+    testing/URLfrontier_testing.cpp
+    src/URLfrontier.cpp
+)
+
+target_include_directories(URLFrontierTests PRIVATE
+    ${CMAKE_SOURCE_DIR}/include
+    ${CMAKE_SOURCE_DIR}/ds_library-Vivek/CollectionsLib-RedisLite/include
+)
+
+target_link_libraries(URLFrontierTests PRIVATE
+    CollectionsLib
+    GTest::gtest_main
+)
+
+gtest_discover_tests(URLFrontierTests)
+
+

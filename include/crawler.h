@@ -16,6 +16,7 @@
 class Crawler {
 private:
   int maxDepth;
+  
 
   URLValidator validator;
   URLNormalizer normalizer;
