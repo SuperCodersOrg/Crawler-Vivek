@@ -223,6 +223,71 @@ URLFrontierTests/fast:
 .PHONY : URLFrontierTests/fast
 
 #=============================================================================
+# Target rules for targets named SeenStorageTests
+
+# Build rule for target.
+SeenStorageTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 SeenStorageTests
+.PHONY : SeenStorageTests
+
+# fast build rule for target.
+SeenStorageTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SeenStorageTests.dir\build.make CMakeFiles/SeenStorageTests.dir/build
+.PHONY : SeenStorageTests/fast
+
+#=============================================================================
+# Target rules for targets named KMPTests
+
+# Build rule for target.
+KMPTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 KMPTests
+.PHONY : KMPTests
+
+# fast build rule for target.
+KMPTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\KMPTests.dir\build.make CMakeFiles/KMPTests.dir/build
+.PHONY : KMPTests/fast
+
+#=============================================================================
+# Target rules for targets named HTMLParserTests
+
+# Build rule for target.
+HTMLParserTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 HTMLParserTests
+.PHONY : HTMLParserTests
+
+# fast build rule for target.
+HTMLParserTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HTMLParserTests.dir\build.make CMakeFiles/HTMLParserTests.dir/build
+.PHONY : HTMLParserTests/fast
+
+#=============================================================================
+# Target rules for targets named FrameworkDetectorTests
+
+# Build rule for target.
+FrameworkDetectorTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 FrameworkDetectorTests
+.PHONY : FrameworkDetectorTests
+
+# fast build rule for target.
+FrameworkDetectorTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FrameworkDetectorTests.dir\build.make CMakeFiles/FrameworkDetectorTests.dir/build
+.PHONY : FrameworkDetectorTests/fast
+
+#=============================================================================
+# Target rules for targets named PageStorageTests
+
+# Build rule for target.
+PageStorageTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 PageStorageTests
+.PHONY : PageStorageTests
+
+# fast build rule for target.
+PageStorageTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PageStorageTests.dir\build.make CMakeFiles/PageStorageTests.dir/build
+.PHONY : PageStorageTests/fast
+
+#=============================================================================
 # Target rules for targets named CollectionsLib
 
 # Build rule for target.
@@ -408,6 +473,7 @@ src/HTMLparser.obj: src/HTMLparser.cpp.obj
 # target to build an object file
 src/HTMLparser.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/HTMLparser.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HTMLParserTests.dir\build.make CMakeFiles/HTMLParserTests.dir/src/HTMLparser.cpp.obj
 .PHONY : src/HTMLparser.cpp.obj
 
 src/HTMLparser.i: src/HTMLparser.cpp.i
@@ -416,6 +482,7 @@ src/HTMLparser.i: src/HTMLparser.cpp.i
 # target to preprocess a source file
 src/HTMLparser.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/HTMLparser.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HTMLParserTests.dir\build.make CMakeFiles/HTMLParserTests.dir/src/HTMLparser.cpp.i
 .PHONY : src/HTMLparser.cpp.i
 
 src/HTMLparser.s: src/HTMLparser.cpp.s
@@ -424,6 +491,7 @@ src/HTMLparser.s: src/HTMLparser.cpp.s
 # target to generate assembly for a file
 src/HTMLparser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/HTMLparser.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HTMLParserTests.dir\build.make CMakeFiles/HTMLParserTests.dir/src/HTMLparser.cpp.s
 .PHONY : src/HTMLparser.cpp.s
 
 src/KMP.obj: src/KMP.cpp.obj
@@ -432,6 +500,8 @@ src/KMP.obj: src/KMP.cpp.obj
 # target to build an object file
 src/KMP.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/KMP.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\KMPTests.dir\build.make CMakeFiles/KMPTests.dir/src/KMP.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HTMLParserTests.dir\build.make CMakeFiles/HTMLParserTests.dir/src/KMP.cpp.obj
 .PHONY : src/KMP.cpp.obj
 
 src/KMP.i: src/KMP.cpp.i
@@ -440,6 +510,8 @@ src/KMP.i: src/KMP.cpp.i
 # target to preprocess a source file
 src/KMP.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/KMP.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\KMPTests.dir\build.make CMakeFiles/KMPTests.dir/src/KMP.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HTMLParserTests.dir\build.make CMakeFiles/HTMLParserTests.dir/src/KMP.cpp.i
 .PHONY : src/KMP.cpp.i
 
 src/KMP.s: src/KMP.cpp.s
@@ -448,6 +520,8 @@ src/KMP.s: src/KMP.cpp.s
 # target to generate assembly for a file
 src/KMP.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/KMP.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\KMPTests.dir\build.make CMakeFiles/KMPTests.dir/src/KMP.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HTMLParserTests.dir\build.make CMakeFiles/HTMLParserTests.dir/src/KMP.cpp.s
 .PHONY : src/KMP.cpp.s
 
 src/URLfrontier.obj: src/URLfrontier.cpp.obj
@@ -585,6 +659,7 @@ src/frameworkdetector.obj: src/frameworkdetector.cpp.obj
 # target to build an object file
 src/frameworkdetector.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/frameworkdetector.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FrameworkDetectorTests.dir\build.make CMakeFiles/FrameworkDetectorTests.dir/src/frameworkdetector.cpp.obj
 .PHONY : src/frameworkdetector.cpp.obj
 
 src/frameworkdetector.i: src/frameworkdetector.cpp.i
@@ -593,6 +668,7 @@ src/frameworkdetector.i: src/frameworkdetector.cpp.i
 # target to preprocess a source file
 src/frameworkdetector.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/frameworkdetector.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FrameworkDetectorTests.dir\build.make CMakeFiles/FrameworkDetectorTests.dir/src/frameworkdetector.cpp.i
 .PHONY : src/frameworkdetector.cpp.i
 
 src/frameworkdetector.s: src/frameworkdetector.cpp.s
@@ -601,6 +677,7 @@ src/frameworkdetector.s: src/frameworkdetector.cpp.s
 # target to generate assembly for a file
 src/frameworkdetector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/frameworkdetector.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FrameworkDetectorTests.dir\build.make CMakeFiles/FrameworkDetectorTests.dir/src/frameworkdetector.cpp.s
 .PHONY : src/frameworkdetector.cpp.s
 
 src/pagestorage.obj: src/pagestorage.cpp.obj
@@ -609,6 +686,7 @@ src/pagestorage.obj: src/pagestorage.cpp.obj
 # target to build an object file
 src/pagestorage.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/pagestorage.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PageStorageTests.dir\build.make CMakeFiles/PageStorageTests.dir/src/pagestorage.cpp.obj
 .PHONY : src/pagestorage.cpp.obj
 
 src/pagestorage.i: src/pagestorage.cpp.i
@@ -617,6 +695,7 @@ src/pagestorage.i: src/pagestorage.cpp.i
 # target to preprocess a source file
 src/pagestorage.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/pagestorage.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PageStorageTests.dir\build.make CMakeFiles/PageStorageTests.dir/src/pagestorage.cpp.i
 .PHONY : src/pagestorage.cpp.i
 
 src/pagestorage.s: src/pagestorage.cpp.s
@@ -625,6 +704,7 @@ src/pagestorage.s: src/pagestorage.cpp.s
 # target to generate assembly for a file
 src/pagestorage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/pagestorage.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PageStorageTests.dir\build.make CMakeFiles/PageStorageTests.dir/src/pagestorage.cpp.s
 .PHONY : src/pagestorage.cpp.s
 
 src/renderengine.obj: src/renderengine.cpp.obj
@@ -657,6 +737,7 @@ src/seenstorage.obj: src/seenstorage.cpp.obj
 # target to build an object file
 src/seenstorage.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/seenstorage.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SeenStorageTests.dir\build.make CMakeFiles/SeenStorageTests.dir/src/seenstorage.cpp.obj
 .PHONY : src/seenstorage.cpp.obj
 
 src/seenstorage.i: src/seenstorage.cpp.i
@@ -665,6 +746,7 @@ src/seenstorage.i: src/seenstorage.cpp.i
 # target to preprocess a source file
 src/seenstorage.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/seenstorage.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SeenStorageTests.dir\build.make CMakeFiles/SeenStorageTests.dir/src/seenstorage.cpp.i
 .PHONY : src/seenstorage.cpp.i
 
 src/seenstorage.s: src/seenstorage.cpp.s
@@ -673,7 +755,128 @@ src/seenstorage.s: src/seenstorage.cpp.s
 # target to generate assembly for a file
 src/seenstorage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crawler.dir\build.make CMakeFiles/Crawler.dir/src/seenstorage.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SeenStorageTests.dir\build.make CMakeFiles/SeenStorageTests.dir/src/seenstorage.cpp.s
 .PHONY : src/seenstorage.cpp.s
+
+testing/FrameworkDetector_testing.obj: testing/FrameworkDetector_testing.cpp.obj
+.PHONY : testing/FrameworkDetector_testing.obj
+
+# target to build an object file
+testing/FrameworkDetector_testing.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FrameworkDetectorTests.dir\build.make CMakeFiles/FrameworkDetectorTests.dir/testing/FrameworkDetector_testing.cpp.obj
+.PHONY : testing/FrameworkDetector_testing.cpp.obj
+
+testing/FrameworkDetector_testing.i: testing/FrameworkDetector_testing.cpp.i
+.PHONY : testing/FrameworkDetector_testing.i
+
+# target to preprocess a source file
+testing/FrameworkDetector_testing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FrameworkDetectorTests.dir\build.make CMakeFiles/FrameworkDetectorTests.dir/testing/FrameworkDetector_testing.cpp.i
+.PHONY : testing/FrameworkDetector_testing.cpp.i
+
+testing/FrameworkDetector_testing.s: testing/FrameworkDetector_testing.cpp.s
+.PHONY : testing/FrameworkDetector_testing.s
+
+# target to generate assembly for a file
+testing/FrameworkDetector_testing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FrameworkDetectorTests.dir\build.make CMakeFiles/FrameworkDetectorTests.dir/testing/FrameworkDetector_testing.cpp.s
+.PHONY : testing/FrameworkDetector_testing.cpp.s
+
+testing/HTMLparser_testing.obj: testing/HTMLparser_testing.cpp.obj
+.PHONY : testing/HTMLparser_testing.obj
+
+# target to build an object file
+testing/HTMLparser_testing.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HTMLParserTests.dir\build.make CMakeFiles/HTMLParserTests.dir/testing/HTMLparser_testing.cpp.obj
+.PHONY : testing/HTMLparser_testing.cpp.obj
+
+testing/HTMLparser_testing.i: testing/HTMLparser_testing.cpp.i
+.PHONY : testing/HTMLparser_testing.i
+
+# target to preprocess a source file
+testing/HTMLparser_testing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HTMLParserTests.dir\build.make CMakeFiles/HTMLParserTests.dir/testing/HTMLparser_testing.cpp.i
+.PHONY : testing/HTMLparser_testing.cpp.i
+
+testing/HTMLparser_testing.s: testing/HTMLparser_testing.cpp.s
+.PHONY : testing/HTMLparser_testing.s
+
+# target to generate assembly for a file
+testing/HTMLparser_testing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HTMLParserTests.dir\build.make CMakeFiles/HTMLParserTests.dir/testing/HTMLparser_testing.cpp.s
+.PHONY : testing/HTMLparser_testing.cpp.s
+
+testing/KMP_testing.obj: testing/KMP_testing.cpp.obj
+.PHONY : testing/KMP_testing.obj
+
+# target to build an object file
+testing/KMP_testing.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\KMPTests.dir\build.make CMakeFiles/KMPTests.dir/testing/KMP_testing.cpp.obj
+.PHONY : testing/KMP_testing.cpp.obj
+
+testing/KMP_testing.i: testing/KMP_testing.cpp.i
+.PHONY : testing/KMP_testing.i
+
+# target to preprocess a source file
+testing/KMP_testing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\KMPTests.dir\build.make CMakeFiles/KMPTests.dir/testing/KMP_testing.cpp.i
+.PHONY : testing/KMP_testing.cpp.i
+
+testing/KMP_testing.s: testing/KMP_testing.cpp.s
+.PHONY : testing/KMP_testing.s
+
+# target to generate assembly for a file
+testing/KMP_testing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\KMPTests.dir\build.make CMakeFiles/KMPTests.dir/testing/KMP_testing.cpp.s
+.PHONY : testing/KMP_testing.cpp.s
+
+testing/PageStorage_testing.obj: testing/PageStorage_testing.cpp.obj
+.PHONY : testing/PageStorage_testing.obj
+
+# target to build an object file
+testing/PageStorage_testing.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PageStorageTests.dir\build.make CMakeFiles/PageStorageTests.dir/testing/PageStorage_testing.cpp.obj
+.PHONY : testing/PageStorage_testing.cpp.obj
+
+testing/PageStorage_testing.i: testing/PageStorage_testing.cpp.i
+.PHONY : testing/PageStorage_testing.i
+
+# target to preprocess a source file
+testing/PageStorage_testing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PageStorageTests.dir\build.make CMakeFiles/PageStorageTests.dir/testing/PageStorage_testing.cpp.i
+.PHONY : testing/PageStorage_testing.cpp.i
+
+testing/PageStorage_testing.s: testing/PageStorage_testing.cpp.s
+.PHONY : testing/PageStorage_testing.s
+
+# target to generate assembly for a file
+testing/PageStorage_testing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PageStorageTests.dir\build.make CMakeFiles/PageStorageTests.dir/testing/PageStorage_testing.cpp.s
+.PHONY : testing/PageStorage_testing.cpp.s
+
+testing/Seenstorage_testing.obj: testing/Seenstorage_testing.cpp.obj
+.PHONY : testing/Seenstorage_testing.obj
+
+# target to build an object file
+testing/Seenstorage_testing.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SeenStorageTests.dir\build.make CMakeFiles/SeenStorageTests.dir/testing/Seenstorage_testing.cpp.obj
+.PHONY : testing/Seenstorage_testing.cpp.obj
+
+testing/Seenstorage_testing.i: testing/Seenstorage_testing.cpp.i
+.PHONY : testing/Seenstorage_testing.i
+
+# target to preprocess a source file
+testing/Seenstorage_testing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SeenStorageTests.dir\build.make CMakeFiles/SeenStorageTests.dir/testing/Seenstorage_testing.cpp.i
+.PHONY : testing/Seenstorage_testing.cpp.i
+
+testing/Seenstorage_testing.s: testing/Seenstorage_testing.cpp.s
+.PHONY : testing/Seenstorage_testing.s
+
+# target to generate assembly for a file
+testing/Seenstorage_testing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SeenStorageTests.dir\build.make CMakeFiles/SeenStorageTests.dir/testing/Seenstorage_testing.cpp.s
+.PHONY : testing/Seenstorage_testing.cpp.s
 
 testing/URLfrontier_testing.obj: testing/URLfrontier_testing.cpp.obj
 .PHONY : testing/URLfrontier_testing.obj
@@ -762,6 +965,11 @@ help:
 	@echo ... test
 	@echo ... CollectionsLib
 	@echo ... Crawler
+	@echo ... FrameworkDetectorTests
+	@echo ... HTMLParserTests
+	@echo ... KMPTests
+	@echo ... PageStorageTests
+	@echo ... SeenStorageTests
 	@echo ... URLFrontierTests
 	@echo ... URLNormalizerTests
 	@echo ... URLValidatorTests
@@ -812,6 +1020,21 @@ help:
 	@echo ... src/seenstorage.obj
 	@echo ... src/seenstorage.i
 	@echo ... src/seenstorage.s
+	@echo ... testing/FrameworkDetector_testing.obj
+	@echo ... testing/FrameworkDetector_testing.i
+	@echo ... testing/FrameworkDetector_testing.s
+	@echo ... testing/HTMLparser_testing.obj
+	@echo ... testing/HTMLparser_testing.i
+	@echo ... testing/HTMLparser_testing.s
+	@echo ... testing/KMP_testing.obj
+	@echo ... testing/KMP_testing.i
+	@echo ... testing/KMP_testing.s
+	@echo ... testing/PageStorage_testing.obj
+	@echo ... testing/PageStorage_testing.i
+	@echo ... testing/PageStorage_testing.s
+	@echo ... testing/Seenstorage_testing.obj
+	@echo ... testing/Seenstorage_testing.i
+	@echo ... testing/Seenstorage_testing.s
 	@echo ... testing/URLfrontier_testing.obj
 	@echo ... testing/URLfrontier_testing.i
 	@echo ... testing/URLfrontier_testing.s

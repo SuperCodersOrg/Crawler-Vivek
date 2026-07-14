@@ -1,0 +1,5 @@
+if(EXISTS "D:/projects/Crawler/build/HTMLParserTests_e3b0c442_tests.cmake")
+  include("D:/projects/Crawler/build/HTMLParserTests_e3b0c442_tests.cmake")
+else()
+  add_test(HTMLParserTests_NOT_BUILT HTMLParserTests_NOT_BUILT)
+endif()

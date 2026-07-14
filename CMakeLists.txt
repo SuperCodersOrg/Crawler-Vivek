@@ -184,4 +184,26 @@ target_link_libraries(FrameworkDetectorTests PRIVATE
 
 gtest_discover_tests(FrameworkDetectorTests)
 
+# page storage testing
+
+add_executable(PageStorageTests
+    testing/PageStorage_testing.cpp
+    src/pagestorage.cpp
+)
+
+
+target_include_directories(PageStorageTests PRIVATE
+    ${CMAKE_SOURCE_DIR}/include
+    C:/msys64/ucrt64/include
+)
+
+
+target_link_libraries(PageStorageTests PRIVATE
+    GTest::gtest_main
+    mariadb
+)
+
+
+gtest_discover_tests(PageStorageTests)
+
 

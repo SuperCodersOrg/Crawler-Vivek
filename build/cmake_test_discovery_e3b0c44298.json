@@ -1,75 +1,106 @@
 {
-  "tests": 13,
+  "tests": 18,
   "name": "AllTests",
   "testsuites": [
     {
-      "name": "URLFrontierTest",
-      "tests": 13,
+      "name": "PageStorageTest",
+      "tests": 8,
       "testsuite": [
         {
-          "name": "IsEmptyWhenCreated",
-          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
-          "line": 5
+          "name": "CreatesConnection",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 4
         },
         {
-          "name": "AddsSingleURL",
-          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
-          "line": 12
+          "name": "StoresPageSuccessfully",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 8
         },
         {
-          "name": "GetsAddedURL",
-          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "name": "RetrievesHTML",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
           "line": 21
         },
         {
-          "name": "PreservesDepth",
-          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
-          "line": 31
+          "name": "UpdatesExistingURL",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 33
         },
         {
-          "name": "PreservesRetryCount",
-          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
-          "line": 41
+          "name": "ReturnsFalseForMissingPage",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 45
         },
         {
-          "name": "MaintainsFIFOOrder",
-          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
-          "line": 51
+          "name": "RemovesPage",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 53
         },
         {
-          "name": "GetNextURLRemovesURL",
-          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
-          "line": 63
+          "name": "CountsPages",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 65
         },
         {
-          "name": "PeekReturnsNextURL",
-          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
-          "line": 76
+          "name": "ClearsPages",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 77
+        }
+      ]
+    },
+    {
+      "name": "PageStorageEdgeTest",
+      "tests": 10,
+      "testsuite": [
+        {
+          "name": "StoresEmptyHTML",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 89
         },
         {
-          "name": "PeekDoesNotRemoveURL",
-          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
-          "line": 88
-        },
-        {
-          "name": "ClearRemovesAllURLs",
-          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "name": "StoresHTMLWithQuotesAndSpecialCharacters",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
           "line": 99
         },
         {
-          "name": "CanReuseFrontierAfterClear",
-          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
+          "name": "StoresMultilineHTML",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
           "line": 112
         },
         {
-          "name": "GetNextURLFromEmptyFrontierThrowsException",
-          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
-          "line": 124
+          "name": "StoresLargeHTML",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 127
         },
         {
-          "name": "PeekFromEmptyFrontierThrowsException",
-          "file": "D:\\projects\\Crawler\\testing\\URLfrontier_testing.cpp",
-          "line": 130
+          "name": "HandlesURLWithQueryParameters",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 142
+        },
+        {
+          "name": "HandlesURLWithSpecialCharacters",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 153
+        },
+        {
+          "name": "RemovingNonExistingPageReturnsFalse",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 163
+        },
+        {
+          "name": "DuplicateURLDoesNotIncreasePageCount",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 170
+        },
+        {
+          "name": "ClearEmptyStorageDoesNotFail",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 185
+        },
+        {
+          "name": "StoresHTMLContainingNullByte",
+          "file": "D:\\projects\\Crawler\\testing\\PageStorage_testing.cpp",
+          "line": 194
         }
       ]
     }

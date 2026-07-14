@@ -1,0 +1,5 @@
+if(EXISTS "D:/projects/Crawler/build/FrameworkDetectorTests_e3b0c442_tests.cmake")
+  include("D:/projects/Crawler/build/FrameworkDetectorTests_e3b0c442_tests.cmake")
+else()
+  add_test(FrameworkDetectorTests_NOT_BUILT FrameworkDetectorTests_NOT_BUILT)
+endif()

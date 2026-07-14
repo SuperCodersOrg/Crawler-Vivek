@@ -1,0 +1,5 @@
+if(EXISTS "D:/projects/Crawler/build/KMPTests_e3b0c442_tests.cmake")
+  include("D:/projects/Crawler/build/KMPTests_e3b0c442_tests.cmake")
+else()
+  add_test(KMPTests_NOT_BUILT KMPTests_NOT_BUILT)
+endif()

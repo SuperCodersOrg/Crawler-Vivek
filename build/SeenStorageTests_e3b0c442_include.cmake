@@ -1,0 +1,5 @@
+if(EXISTS "D:/projects/Crawler/build/SeenStorageTests_e3b0c442_tests.cmake")
+  include("D:/projects/Crawler/build/SeenStorageTests_e3b0c442_tests.cmake")
+else()
+  add_test(SeenStorageTests_NOT_BUILT SeenStorageTests_NOT_BUILT)
+endif()

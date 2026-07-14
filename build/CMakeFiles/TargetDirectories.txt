@@ -2,6 +2,11 @@ D:/projects/Crawler/build/CMakeFiles/Crawler.dir
 D:/projects/Crawler/build/CMakeFiles/URLValidatorTests.dir
 D:/projects/Crawler/build/CMakeFiles/URLNormalizerTests.dir
 D:/projects/Crawler/build/CMakeFiles/URLFrontierTests.dir
+D:/projects/Crawler/build/CMakeFiles/SeenStorageTests.dir
+D:/projects/Crawler/build/CMakeFiles/KMPTests.dir
+D:/projects/Crawler/build/CMakeFiles/HTMLParserTests.dir
+D:/projects/Crawler/build/CMakeFiles/FrameworkDetectorTests.dir
+D:/projects/Crawler/build/CMakeFiles/PageStorageTests.dir
 D:/projects/Crawler/build/CMakeFiles/test.dir
 D:/projects/Crawler/build/CMakeFiles/edit_cache.dir
 D:/projects/Crawler/build/CMakeFiles/rebuild_cache.dir
